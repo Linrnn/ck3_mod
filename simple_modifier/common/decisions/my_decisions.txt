@@ -1,0 +1,15 @@
+我的决议 =
+{
+    picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    desc = "我的决议"
+    is_valid_showing_failures_only =
+	{
+        is_available_adult = yes
+    }
+    effect =
+	{
+        custom_tooltip = give_money_decision_effect_tooltip
+        trigger_event = my_events.1
+    }
+    ai_check_interval = 0
+}

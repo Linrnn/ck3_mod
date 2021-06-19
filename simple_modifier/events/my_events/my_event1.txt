@@ -1,0 +1,28 @@
+namespace = my_events
+
+my_events.1 =
+{
+    type = character_event
+    title = "决议1"
+    desc = "决议描述1"
+    theme = stewardship
+    left_portrait = root
+
+    option =
+	{
+        name = "选项1"
+        add_gold = 1000
+        add_prestige = -500
+    }
+    option =
+	{
+        name = "选项2"
+        gold = -1000
+    }
+    option =
+	{
+        name = "选项3"
+        remove_short_term_gold = 1000
+        add_prestige = 500
+    }
+}
