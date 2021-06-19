@@ -9,16 +9,16 @@ my_events.1 =
 
 	option =
 	{
-        name = "接收主"
-		add_house_modifier = 主的旨意
+        name = "欣然接受"
+		add_character_modifier = 主的旨意
     }
 	option =
 	{
-        name = "拒绝主"
-		remove_dynasty_modifier = 主的旨意
+        name = "拒绝主的好意"
+		remove_character_modifier = 主的旨意
     }
 	option =
 	{
-        name = "再想一下"
+        name = "再想想"
     }
 }
