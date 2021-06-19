@@ -1,0 +1,24 @@
+namespace = my_events
+
+my_events.1 =
+{
+    type = none
+    title = "主答复了我的祈祷"
+    desc = "我该如何回复主的答复..."
+    left_portrait = root
+
+	option =
+	{
+        name = "接收主"
+		add_house_modifier = 主的旨意
+    }
+	option =
+	{
+        name = "拒绝主"
+		remove_dynasty_modifier = 主的旨意
+    }
+	option =
+	{
+        name = "再想一下"
+    }
+}
