@@ -3,4 +3,4 @@ tags={
 	"Events"
 }
 name="simple_buff"
-supported_version="1.4.0"
+supported_version="1.4.*"
