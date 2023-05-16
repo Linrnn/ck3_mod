@@ -1,21 +1,66 @@
-向主祈祷 =
+获得加成 =
 {
-    desc = "请求主保佑我..."
-    effect =
-	{
-        custom_tooltip = "请求主听见我的祈祷，保佑我与我的家族与我的王朝"
+    ai_goal = no
+    effect = {
         trigger_event = my_events.1
     }
     ai_check_interval = 0
+	ai_will_do = {
+         base = 0
+        }
 }
 
-向主乞讨 =
+获得资源 =
 {
-    desc = "请求主施舍我..."
-    effect =
-	{
-        custom_tooltip = "请求主听见我的祈祷，给予我的请求"
+    ai_goal = no
+    effect = {
         trigger_event = my_events.2
     }
     ai_check_interval = 0
+	ai_will_do = {
+        base = 0
+       }
+}
+
+修改文化 =
+{
+    ai_goal = no
+    effect = {
+        trigger_event = my_events.3
+    }
+    ai_check_interval = 0
+	ai_will_do = {
+        base = 0
+       }
+}
+
+移除地产 =
+{
+    ai_goal = no
+    effect = {
+        province = {
+            every_barony = {
+                set_holding_type = none
+                #remove_holding
+            }
+        }
+    }
+    ai_check_interval = 0
+	ai_will_do = {
+        base = 100
+       }
+}
+
+扣钱 =
+{
+    is_valid = {
+        gold > -100
+    }
+    effect = {
+        remove_long_term_gold = 1000
+    }
+    ai_check_interval = 1
+	ai_will_do = {
+        base = 100
+       }
 }

@@ -1,8 +1,10 @@
 主的旨意 =
 {
 	icon = feast_positive
-	domain_limit = 10			#直辖上限+10
-	#vassal_limit = 100			#直属封臣+100
-	#knight_limit = 10			#骑士+10
-	men_at_arms_cap = 10		#兵士军团的最大数量+10
+	domain_limit = 10				# 直辖上限
+	vassal_limit = 100				# 附庸上限
+	knight_limit = 10				# 骑士上限
+	men_at_arms_cap = 10			# 影响军团总数
+	men_at_arms_limit = 10			# 影响单个军团的规模
+	# 好感
 }
