@@ -85,3 +85,77 @@ my_events.3 =
         name = "退出"
     }
 }
+
+my_events.4 =
+{
+    type = character_event
+    desc = "需要先存档，再重新读档，否则游戏会闪退！！！"
+	option = {
+    	name = "移除地产"
+		every_province = {
+            if = {
+                limit = {
+					barony = {
+                        is_capital_barony = no              # 首都
+                    }
+                    has_special_building = no               # 特殊建筑
+                    has_special_building_slot = no          # 特殊建筑槽
+                    has_holding = yes                       # 地产
+                }
+                remove_holding = yes
+                # barony = {
+                #     root = {
+                #         revoke_lease = yes				# 撤销租约
+                #         destroy_title = prev				# 销毁头衔
+                #     }
+                # }
+            }
+        }
+    }
+	option = {
+		name = "整理建筑"
+        every_province = {
+			if = {
+				limit = {
+					has_holding = no
+					or = {
+						has_special_building = true
+						has_special_building_slot = true
+					}
+					set_holding_type = city_holding
+				}
+			}
+			else_if = {
+				limit = {
+					has_holding_type = city_holding			# 城市地产
+				}
+				set_holding_type = none
+				set_holding_type = city_holding
+			}
+			else_if = {
+				limit = {
+					has_holding_type = castle_holding		# 城堡地产
+				}
+				set_holding_type = none
+				set_holding_type = castle_holding
+			}
+			else_if = {
+				limit = {
+					has_holding_type = church_holding   	# 神庙地产
+				}
+				set_holding_type = none
+				set_holding_type = church_holding
+			}
+			else_if = {
+				limit = {
+					has_holding_type = tribal_holding   	# 部落地产
+				}
+				set_holding_type = none
+				set_holding_type = tribal_holding
+			}
+        }
+    }
+	option = {
+        name = "退出"
+    }
+}

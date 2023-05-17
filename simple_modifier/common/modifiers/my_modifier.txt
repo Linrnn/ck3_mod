@@ -1,13 +1,14 @@
 主的庇佑 =
 {
 	icon = feast_positive
-	domain_limit = 10			# 直辖上限
-	vassal_limit = 100			# 附庸上限
-	knight_limit = 10			# 骑士上限
-	men_at_arms_cap = 10		# 影响军团总数
-	men_at_arms_limit = 10		# 影响单个军团的规模
-	general_opinion = 1000		# 大众好感
-	county_opinion_add = 1000	# 省份大众好感
+	culture_tradition_max_add = 10			# 最大文化传统数
+	men_at_arms_cap = 10					# 兵士军团的规模
+	men_at_arms_limit = 10					# 单个兵士军团的最大数量
+	knight_limit = 10						# 骑士数量
+	domain_limit = 10						# 封臣上限
+	vassal_limit = 100						# 附庸上限
+	general_opinion = 1000					# 大众好感
+	county_opinion_add = 1000				# 民众好感度
 
 	#opinion_of_liege = 1000					# 领主好感
 	#direct_vassal_opinion = 1000				# 直辖附庸好感
@@ -17,6 +18,6 @@
 主的裁决 =
 {
 	icon = feast_positive
-	general_opinion = 1000		# 大众好感
-	county_opinion_add = 1000	# 省份大众好感
+	general_opinion = 1000
+	county_opinion_add = 1000
 }

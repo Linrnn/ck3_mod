@@ -34,25 +34,11 @@ player_修改文化 =
        }
 }
 
-player_移除地产 =
+player_整理男爵领 =
 {
     ai_goal = no
     effect = {
-        every_province = {
-            if = {
-                limit = {
-                    or = {
-                        has_holding_type = city_holding     # 城市地产
-                        has_holding_type = castle_holding   # 城堡地产
-                        has_holding_type = church_holding   # 神庙地产
-                    }
-                    has_special_building = no               # 特殊建筑
-                    has_special_building_slot = no          # 特殊建筑槽
-                }
-                #set_holding_type = none
-                remove_holding = yes
-            }
-        }
+        trigger_event = my_events.4
     }
     ai_check_interval = 0
 	ai_will_do = {
@@ -91,9 +77,9 @@ ai_sub_prestige =
 ai_add_modifier =
 {
     is_valid = {
-        NOT = {
+        not = {
             has_character_modifier = 主的裁决
-            }
+        }
     }
     effect = {
         add_character_modifier = 主的裁决
