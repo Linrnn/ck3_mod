@@ -1,4 +1,4 @@
-获得加成 =
+player_获得加成 =
 {
     ai_goal = no
     effect = {
@@ -10,7 +10,7 @@
         }
 }
 
-获得资源 =
+player_获得资源 =
 {
     ai_goal = no
     effect = {
@@ -22,7 +22,7 @@
        }
 }
 
-修改文化 =
+player_修改文化 =
 {
     ai_goal = no
     effect = {
@@ -34,30 +34,69 @@
        }
 }
 
-移除地产 =
+player_移除地产 =
 {
     ai_goal = no
     effect = {
-        province = {
-            every_barony = {
-                set_holding_type = none
-                #remove_holding
+        every_province = {
+            if = {
+                limit = {
+                    or = {
+                        has_holding_type = city_holding     # 城市地产
+                        has_holding_type = castle_holding   # 城堡地产
+                        has_holding_type = church_holding   # 神庙地产
+                    }
+                    has_special_building = no               # 特殊建筑
+                    has_special_building_slot = no          # 特殊建筑槽
+                }
+                #set_holding_type = none
+                remove_holding = yes
             }
         }
     }
     ai_check_interval = 0
 	ai_will_do = {
-        base = 100
+        base = 0
        }
 }
 
-扣钱 =
+ai_sub_gold =
 {
     is_valid = {
         gold > -100
     }
     effect = {
         remove_long_term_gold = 1000
+    }
+    ai_check_interval = 1
+	ai_will_do = {
+        base = 100
+       }
+}
+
+ai_sub_prestige =
+{
+    is_valid = {
+        prestige > -100
+    }
+    effect = {
+        add_prestige = -1000
+    }
+    ai_check_interval = 1
+	ai_will_do = {
+        base = 100
+       }
+}
+
+ai_add_modifier =
+{
+    is_valid = {
+        NOT = {
+            has_character_modifier = 主的裁决
+            }
+    }
+    effect = {
+        add_character_modifier = 主的裁决
     }
     ai_check_interval = 1
 	ai_will_do = {

@@ -14,7 +14,7 @@ my_events.1 =
     }
 	option = {
         name = "角色修正"
-		add_character_modifier = 主的旨意
+		add_character_modifier = 主的庇佑
     }
 	option = {
         name = "家族修正"
