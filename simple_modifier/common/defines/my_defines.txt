@@ -1,0 +1,4 @@
+﻿NCulture = {
+	DEFAULT_MAX_TRADITIONS = 10					# 文化传统上限
+	REFORMATION_PROGRESS_GAIN_BASE = 100000		# 每月文化改革进度（上限100）
+}

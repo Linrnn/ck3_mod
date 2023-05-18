@@ -1,91 +1,91 @@
 player_获得加成 =
 {
-    ai_goal = no
-    effect = {
-        trigger_event = my_events.1
-    }
-    ai_check_interval = 0
+	ai_goal = no
+	effect = {
+		trigger_event = my_events.1
+	}
+	ai_check_interval = 0
 	ai_will_do = {
-         base = 0
-        }
+		base = 0
+	}
 }
 
-player_获得资源 =
+player_增加资源 =
 {
-    ai_goal = no
-    effect = {
-        trigger_event = my_events.2
-    }
-    ai_check_interval = 0
+	ai_goal = no
+	effect = {
+		trigger_event = my_events.2
+	}
+	ai_check_interval = 0
 	ai_will_do = {
-        base = 0
-       }
+		base = 0
+	}
 }
 
 player_修改文化 =
 {
-    ai_goal = no
-    effect = {
-        trigger_event = my_events.3
-    }
-    ai_check_interval = 0
+	ai_goal = no
+	effect = {
+		trigger_event = my_events.3
+	}
+	ai_check_interval = 0
 	ai_will_do = {
-        base = 0
-       }
+		base = 0
+	}
 }
 
 player_整理男爵领 =
 {
-    ai_goal = no
-    effect = {
-        trigger_event = my_events.4
-    }
-    ai_check_interval = 0
+	ai_goal = no
+	effect = {
+		trigger_event = my_events.4
+	}
+	ai_check_interval = 0
 	ai_will_do = {
-        base = 0
-       }
+		base = 0
+	}
 }
 
 ai_sub_gold =
 {
-    is_valid = {
-        gold > -100
-    }
-    effect = {
-        remove_long_term_gold = 1000
-    }
-    ai_check_interval = 1
+	is_valid = {
+		gold > -100
+	}
+	effect = {
+		remove_long_term_gold = 1000
+	}
+	ai_check_interval = 1
 	ai_will_do = {
-        base = 100
-       }
+		base = 100
+	}
 }
 
 ai_sub_prestige =
 {
-    is_valid = {
-        prestige > -100
-    }
-    effect = {
-        add_prestige = -1000
-    }
-    ai_check_interval = 1
+	is_valid = {
+		prestige > -100
+	}
+	effect = {
+		add_prestige = -1000
+	}
+	ai_check_interval = 1
 	ai_will_do = {
-        base = 100
-       }
+		base = 100
+	}
 }
 
 ai_add_modifier =
 {
-    is_valid = {
-        not = {
-            has_character_modifier = 主的裁决
-        }
-    }
-    effect = {
-        add_character_modifier = 主的裁决
-    }
-    ai_check_interval = 1
+	is_valid = {
+		not = {
+			has_character_modifier = 主的裁决
+		}
+	}
+	effect = {
+		add_character_modifier = 主的裁决
+	}
+	ai_check_interval = 1
 	ai_will_do = {
-        base = 100
-       }
+		base = 100
+	}
 }

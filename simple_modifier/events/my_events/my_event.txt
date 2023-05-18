@@ -2,77 +2,87 @@ namespace = my_events
 
 my_events.1 =
 {
-    type = character_event
+	type = character_event
 
 	option = {
-        name = "角色特质"
+		name = "角色特质"
 		add_trait = saoshyant	# 萨奥希扬特
 		add_trait = sayyid		# 赛义德/赛义达
 		add_trait = paragon		# 典范
 		add_trait = savior		# 救主
 		add_trait = witch		# 巫师
-    }
+	}
 	option = {
-        name = "角色修正"
+		name = "角色修正"
 		add_character_modifier = 主的庇佑
-    }
+		remove_character_modifier = has_recently_changed_laws_modifier
+	}
 	option = {
-        name = "家族修正"
+		name = "家族修正"
 		house =	{
 			add_house_modifier = witch_coven				# 巫师集会
 		}
-    }
+	}
 	option = {
-        name = "宗族修正"
+		name = "宗族修正"
 		dynasty = {
 			add_dynasty_modifier = dynasty_of_many_crowns	# 众王之族
 			add_dynasty_modifier = strong_blood				# 强大的血脉
 		}
-    }
+	}
+	# option = {
+	# 	name = "传统修正"
+	# 	if = {
+	# 		limit = {
+	# 			has_variable  = tradition_cooldown
+	# 		}
+	# 		remove_variable = tradition_cooldown			# 传统冷却
+	# 	}
+	# }
 	option = {
-        name = "退出"
-    }
+		name = "退出"
+	}
 }
 
 my_events.2 =
 {
-    type = character_event
+	type = character_event
 
 	option = {
-        name = "金钱"
+		name = "金钱"
 		add_gold = 10000
-    }
+	}
 	option = {
-        name = "威望"
-		add_prestige = 1000
-    }
+		name = "威望"
+		add_prestige = 10000
+	}
 	option = {
-        name = "虔诚"
-		add_piety = 5000
-    }
+		name = "虔诚"
+		add_piety = 10000
+	}
 	option = {
-        name = "宗族威望"
+		name = "宗族威望"
 		dynasty = {
-			add_dynasty_prestige = 3000
+			add_dynasty_prestige = 10000
 		}
-    }
+	}
 	option = {
-        name = "退出"
-    }
+		name = "退出"
+	}
 }
 
 my_events.3 =
 {
-    type = character_event
+	type = character_event
 
 	option = {
-    	name = "斯堪的纳维亚"
+		name = "斯堪的纳维亚"
 		convert_family_culture_and_notify_vassals_effect = {
 			CONVERTER = root
 			OLD_CULTURE = root.culture
 			NEW_CULTURE = culture:norse
 		}
-    }
+	}
 	option = {
 		name = "伊比利亚"
 		convert_family_culture_and_notify_vassals_effect = {
@@ -80,41 +90,41 @@ my_events.3 =
 			OLD_CULTURE = root.culture
 			NEW_CULTURE = culture:castilian
 		}
-    }
+	}
 	option = {
-        name = "退出"
-    }
+		name = "退出"
+	}
 }
 
 my_events.4 =
 {
-    type = character_event
-    desc = "需要先存档，再重新读档，否则游戏会闪退！！！"
+	type = character_event
+	desc = "需要先存档，再重新读档，否则游戏会闪退！！！"
 	option = {
-    	name = "移除地产"
+		name = "移除地产"
 		every_province = {
-            if = {
-                limit = {
+			if = {
+				limit = {
 					barony = {
-                        is_capital_barony = no              # 首都
-                    }
-                    has_special_building = no               # 特殊建筑
-                    has_special_building_slot = no          # 特殊建筑槽
-                    has_holding = yes                       # 地产
-                }
-                remove_holding = yes
-                # barony = {
-                #     root = {
-                #         revoke_lease = yes				# 撤销租约
-                #         destroy_title = prev				# 销毁头衔
-                #     }
-                # }
-            }
-        }
-    }
+						is_capital_barony = no			# 首都
+					}
+					has_special_building = no			# 特殊建筑
+					has_special_building_slot = no		# 特殊建筑槽
+					has_holding = yes					# 地产
+				}
+				remove_holding = yes
+				# barony = {
+				# 	root = {
+				# 		revoke_lease = yes				# 撤销租约
+				# 		destroy_title = prev			# 销毁头衔
+				# 	}
+				# }
+			}
+		}
+	}
 	option = {
 		name = "整理建筑"
-        every_province = {
+		every_province = {
 			if = {
 				limit = {
 					has_holding = no
@@ -153,9 +163,9 @@ my_events.4 =
 				set_holding_type = none
 				set_holding_type = tribal_holding
 			}
-        }
-    }
+		}
+	}
 	option = {
-        name = "退出"
-    }
+		name = "退出"
+	}
 }
