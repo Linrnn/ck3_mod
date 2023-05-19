@@ -78,6 +78,14 @@ my_events.3 =
 	type = character_event
 
 	option = {
+		name = "本地文化"
+		convert_family_culture_and_notify_vassals_effect = {
+			CONVERTER = root
+			OLD_CULTURE = root.culture
+			NEW_CULTURE = capital_province.culture
+		}
+	}
+	option = {
 		name = "斯堪的纳维亚"
 		convert_family_culture_and_notify_vassals_effect = {
 			CONVERTER = root
