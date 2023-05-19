@@ -30,15 +30,17 @@ my_events.1 =
 			add_dynasty_modifier = strong_blood				# 强大的血脉
 		}
 	}
-	# option = {
-	# 	name = "传统修正"
-	# 	if = {
-	# 		limit = {
-	# 			has_variable  = tradition_cooldown
-	# 		}
-	# 		remove_variable = tradition_cooldown			# 传统冷却
-	# 	}
-	# }
+	option = {
+		name = "传统修正（没有提示是正常的）"
+		culture = {
+			if = {
+				limit = {
+					has_variable  = tradition_cooldown
+				}
+				remove_variable = tradition_cooldown		# 传统冷却
+			}
+		}
+	}
 	option = {
 		name = "退出"
 	}
