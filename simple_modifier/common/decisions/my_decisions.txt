@@ -1,4 +1,4 @@
-player_获得加成 =
+player_修改加成 =
 {
 	ai_goal = no
 	effect = {
@@ -10,7 +10,7 @@ player_获得加成 =
 	}
 }
 
-player_增加资源 =
+player_修改资源 =
 {
 	ai_goal = no
 	effect = {
@@ -49,10 +49,10 @@ player_整理男爵领 =
 ai_sub_gold =
 {
 	is_valid = {
-		gold > -100
+		gold > 100
 	}
 	effect = {
-		remove_long_term_gold = 1000
+		remove_short_term_gold = 50
 	}
 	ai_check_interval = 1
 	ai_will_do = {
@@ -63,10 +63,10 @@ ai_sub_gold =
 ai_sub_prestige =
 {
 	is_valid = {
-		prestige > -100
+		prestige > 100
 	}
 	effect = {
-		add_prestige = -1000
+		add_prestige = -50
 	}
 	ai_check_interval = 1
 	ai_will_do = {
