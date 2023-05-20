@@ -74,34 +74,13 @@ my_events.2 =
 				}
 				remove_short_term_gold = 100
 			}
-			else_if = {
-				limit = {
-					is_ai = yes
-					gold < -1000
-				}
-				add_gold = 1000
-			}
-			else_if = {
-				limit = {
-					is_ai = yes
-					gold < 0
-				}
-				add_gold = 100
-			}
 
 			if = {
 				limit = {
 					is_ai = yes
-					prestige < 0
+					prestige > 100
 				}
-				add_prestige = 100
-			}
-			else_if = {
-				limit = {
-					is_ai = yes
-					prestige < -1000
-				}
-				add_prestige = 1000
+				add_prestige = -100
 			}
 		}
 	}
@@ -148,7 +127,7 @@ my_events.4 =
 	type = character_event
 	desc = "需要先存档，再重新读档，否则游戏会闪退！！！"
 	option = {
-		name = "移除地产"
+		name = "移除地产（暂时不要使用，会闪退）"
 		every_province = {
 			if = {
 				limit = {

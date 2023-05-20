@@ -10,8 +10,8 @@
 	general_opinion = 1000					# 大众好感
 	county_opinion_add = 1000				# 民众好感度
 	# mul
-	build_speed = -100						# 建筑速度
 	holding_build_speed = -100				# 省份地产建筑速度
+	build_speed = -100						# 建筑速度
 
 	#culture_tradition_max_add = 10				# 最大文化传统数
 	#opinion_of_liege = 1000					# 领主好感
@@ -26,6 +26,6 @@
 	general_opinion = 1000
 	county_opinion_add = 1000
 	# mul
-	build_gold_cost = 1000						# 建筑金钱花费
 	holding_build_gold_cost = 1000				# 省份地产建筑金钱花费
+	build_gold_cost = 1000						# 建筑金钱花费
 }
