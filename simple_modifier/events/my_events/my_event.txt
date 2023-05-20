@@ -163,6 +163,7 @@ my_events.4 =
 			}
 			else_if = {
 				limit = {
+					has_free_building_slot = yes
 					has_holding_type = city_holding			# 城市地产
 				}
 				set_holding_type = none
@@ -170,6 +171,7 @@ my_events.4 =
 			}
 			else_if = {
 				limit = {
+					has_free_building_slot = yes
 					has_holding_type = castle_holding		# 城堡地产
 				}
 				set_holding_type = none
@@ -177,6 +179,7 @@ my_events.4 =
 			}
 			else_if = {
 				limit = {
+					has_free_building_slot = yes
 					has_holding_type = church_holding   	# 神庙地产
 				}
 				set_holding_type = none
@@ -184,6 +187,7 @@ my_events.4 =
 			}
 			else_if = {
 				limit = {
+					has_free_building_slot = yes
 					has_holding_type = tribal_holding   	# 部落地产
 				}
 				set_holding_type = none
