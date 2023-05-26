@@ -15,6 +15,7 @@ my_events.1 =
 	option = {
 		name = "角色修正"
 		add_character_modifier = 主的庇佑
+		remove_character_modifier = 主的裁决
 		remove_character_modifier = has_recently_changed_laws_modifier
 	}
 	option = {

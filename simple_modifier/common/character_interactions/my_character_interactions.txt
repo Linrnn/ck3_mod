@@ -1,0 +1,62 @@
+移除负面特质 = {
+	category = my_character_interactions
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			remove_trait = wounded_1		# 受伤
+			remove_trait = wounded_2		# 身受重伤
+			remove_trait = wounded_3		# 严重撕裂
+			remove_trait = sickly			# 多病
+			remove_trait = impotent			# 性无能
+			remove_trait = infirm			# 体弱多病
+			remove_trait = incapable		# 无能
+			remove_trait = inbred			# 近亲繁殖
+			remove_trait = maimed			# 残废
+			remove_trait = blind			# 失明
+
+			remove_trait = ill				# 患病
+			remove_trait = bubonic_plague	# 腺鼠疫
+			remove_trait = cancer			# 癌症
+			remove_trait = consumption		# 肺痨
+			remove_trait = great_pox		# 梅毒
+			remove_trait = gout_ridden		# 痛风
+			remove_trait = leper			# 麻风病
+			remove_trait = lovers_pox		# 情人的疱疹
+			remove_trait = pneumonic		# 肺炎
+			remove_trait = smallpox			# 天花
+			remove_trait = typhus			# 伤寒
+		}
+	}
+
+	auto_accept = yes
+	ai_will_do = 0
+}
+
+# 立刻怀孕 = {
+# 	category = my_character_interactions
+# 	use_diplomatic_range = no
+# 	ignores_pending_interaction_block = yes
+
+# 	is_shown = {
+# 		scope:actor = {
+# 			is_ai = no
+# 		}
+# 	}
+
+# 	on_accept = {
+# 		scope:recipient = {
+# 			add_trait = pregnant			# 怀孕
+# 		}
+# 	}
+
+# 	auto_accept = yes
+# 	ai_will_do = 0
+# }
