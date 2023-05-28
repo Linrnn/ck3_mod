@@ -23,8 +23,8 @@
 {
 	icon = feast_positive
 	# add
-	general_opinion = 1000
-	county_opinion_add = 1000
+	# general_opinion = 1000
+	# county_opinion_add = 1000
 	# mul
 	holding_build_gold_cost = 1000				# 省份地产建筑金钱花费
 	build_gold_cost = 1000						# 建筑金钱花费

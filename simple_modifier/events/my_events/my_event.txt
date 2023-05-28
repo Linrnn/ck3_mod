@@ -133,7 +133,7 @@ my_events.4 =
 			if = {
 				limit = {
 					barony = {
-						is_capital_barony = no			# 首都
+						is_capital_barony = no			# 首府
 					}
 					has_special_building = no			# 特殊建筑
 					has_special_building_slot = no		# 特殊建筑槽
