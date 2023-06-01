@@ -128,7 +128,7 @@ my_events.4 =
 	type = character_event
 	desc = "需要先存档，再重新读档，否则游戏会闪退！！！"
 	option = {
-		name = "移除地产（暂时不要使用，会闪退）"
+		name = "移除地产（会闪退，禁止使用）"
 		every_province = {
 			if = {
 				limit = {
@@ -139,13 +139,18 @@ my_events.4 =
 					has_special_building_slot = no		# 特殊建筑槽
 					has_holding = yes					# 地产
 				}
+				barony = {
+					change_title_holder = {				# 改变头衔持有人
+						holder = root
+						change = scope:change
+					}
+					# root = {
+					# 	revoke_lease = yes				# 撤销租约
+					# 	destroy_title = prev			# 销毁头衔
+					# 	get_title = prev
+					# }
+				}
 				remove_holding = yes
-				# barony = {
-				# 	root = {
-				# 		revoke_lease = yes				# 撤销租约
-				# 		destroy_title = prev			# 销毁头衔
-				# 	}
-				# }
 			}
 		}
 	}
@@ -154,6 +159,7 @@ my_events.4 =
 		every_province = {
 			if = {
 				limit = {
+					# has_free_building_slot = yes		# 存在建筑槽
 					has_holding = no
 					or = {
 						has_special_building = true
@@ -164,35 +170,95 @@ my_events.4 =
 			}
 			else_if = {
 				limit = {
-					has_free_building_slot = yes
-					has_holding_type = city_holding			# 城市地产
+					barony.holder = {
+						is_ai = yes
+					}
+					barony = {
+						is_capital_barony = no
+					}
+					has_holding = yes
+					has_special_building = no
+					has_special_building_slot = no
+					or = {
+						not = {
+							has_holding_type = city_holding	
+						}
+						num_buildings > 1					# 地产默认占一个槽 
+						# building_slots					# 总建筑槽数
+						# free_building_slots				# 可用的建筑槽数
+					}
 				}
 				set_holding_type = none
 				set_holding_type = city_holding
 			}
 			else_if = {
 				limit = {
-					has_free_building_slot = yes
+					barony.holder = {
+						is_ai = yes
+					}
+					has_holding_type = city_holding			# 城市地产
+					num_buildings > 1
+				}
+				set_holding_type = none
+				set_holding_type = city_holding
+			}
+			else_if = {
+				limit = {
+					barony.holder = {
+						is_ai = yes
+					}
 					has_holding_type = castle_holding		# 城堡地产
+					num_buildings > 1
 				}
 				set_holding_type = none
 				set_holding_type = castle_holding
 			}
 			else_if = {
 				limit = {
-					has_free_building_slot = yes
+					barony.holder = {
+						is_ai = yes
+					}
 					has_holding_type = church_holding   	# 神庙地产
+					num_buildings > 1
 				}
 				set_holding_type = none
 				set_holding_type = church_holding
 			}
 			else_if = {
 				limit = {
-					has_free_building_slot = yes
+					barony.holder = {
+						is_ai = yes
+					}
 					has_holding_type = tribal_holding   	# 部落地产
+					num_buildings > 1
 				}
 				set_holding_type = none
 				set_holding_type = tribal_holding
+			}
+		}
+	}
+	option = {
+		name = "设置修正"
+		every_county = {
+			if = {
+				limit = {
+					holder = {
+						is_ai = yes
+					}
+					not = {
+						has_county_modifier = 主的阻挠
+					}
+				}
+				add_county_modifier = 主的阻挠
+			}
+			else_if = {
+				limit = {
+					holder = {
+						is_ai = no
+					}
+					has_county_modifier = 主的阻挠
+				}
+				remove_county_modifier = 主的阻挠
 			}
 		}
 	}

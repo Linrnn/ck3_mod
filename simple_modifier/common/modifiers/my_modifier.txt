@@ -1,17 +1,20 @@
 主的庇佑 =
 {
 	icon = feast_positive
+
 	# add
-	men_at_arms_cap = 10					# 兵士军团的规模
-	men_at_arms_limit = 10					# 单个兵士军团的最大数量
-	knight_limit = 10						# 骑士数量
-	domain_limit = 10						# 封臣上限
-	vassal_limit = 100						# 附庸上限
-	general_opinion = 1000					# 大众好感
-	county_opinion_add = 1000				# 民众好感度
+	men_at_arms_cap = 10						# 兵士军团的规模
+	men_at_arms_limit = 10						# 单个兵士军团的最大数量
+	knight_limit = 100							# 骑士数量
+	domain_limit = 20							# 直辖上限
+	vassal_limit = 100							# 附庸上限
+	general_opinion = 1000						# 大众好感
+	county_opinion_add = 1000					# 民众好感度
+	monthly_dread = 1000						# 每月恐怖值
+
 	# mul
-	holding_build_speed = -100				# 省份地产建筑速度
-	build_speed = -100						# 建筑速度
+	holding_build_speed = -100					# 省份地产建筑速度
+	build_speed = -100							# 建筑速度
 
 	#culture_tradition_max_add = 10				# 最大文化传统数
 	#opinion_of_liege = 1000					# 领主好感
@@ -22,10 +25,19 @@
 主的裁决 =
 {
 	icon = feast_positive
-	# add
-	# general_opinion = 1000
-	# county_opinion_add = 1000
+
 	# mul
 	holding_build_gold_cost = 1000				# 省份地产建筑金钱花费
 	build_gold_cost = 1000						# 建筑金钱花费
+}
+
+主的阻挠 =
+{
+	icon = feast_positive
+
+	# add
+	development_growth = -100					# 发展度增长（固定值）
+
+	# mul
+	development_growth_factor = -10				# 发展度增长（百分比）
 }

@@ -34,7 +34,7 @@ player_修改文化 =
 	}
 }
 
-player_整理男爵领 =
+player_整理领地 =
 {
 	ai_goal = no
 	effect = {
