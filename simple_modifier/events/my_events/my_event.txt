@@ -15,8 +15,8 @@ my_events.1 =
 	option = {
 		name = "角色修正"
 		add_character_modifier = 主的庇佑
-		remove_character_modifier = 主的裁决
-		remove_character_modifier = has_recently_changed_laws_modifier
+		#remove_character_modifier = 主的裁决
+		#remove_character_modifier = has_recently_changed_laws_modifier
 	}
 	option = {
 		name = "家族修正"
@@ -65,26 +65,26 @@ my_events.2 =
 			add_dynasty_prestige = 10000
 		}
 	}
-	option = {
-		name = "ai_资源"
-		every_ruler = {
-			if = {
-				limit = {
-					is_ai = yes
-					gold > 100
-				}
-				remove_short_term_gold = 100
-			}
+	# option = {
+	# 	name = "ai_资源"
+	# 	every_ruler = {
+	# 		if = {
+	# 			limit = {
+	# 				is_ai = yes
+	# 				gold > 100
+	# 			}
+	# 			remove_short_term_gold = 100
+	# 		}
 
-			if = {
-				limit = {
-					is_ai = yes
-					prestige > 100
-				}
-				add_prestige = -100
-			}
-		}
-	}
+	# 		if = {
+	# 			limit = {
+	# 				is_ai = yes
+	# 				prestige > 100
+	# 			}
+	# 			add_prestige = -100
+	# 		}
+	# 	}
+	# }
 	option = {
 		name = "退出"
 	}
@@ -159,7 +159,7 @@ my_events.4 =
 		every_province = {
 			if = {
 				limit = {
-					# has_free_building_slot = yes		# 存在建筑槽
+					# has_free_building_slot = yes			# 存在建筑槽
 					has_holding = no
 					or = {
 						has_special_building = true
@@ -170,7 +170,7 @@ my_events.4 =
 			}
 			else_if = {
 				limit = {
-					barony.holder = {
+					barony.county.holder = {
 						is_ai = yes
 					}
 					barony = {
@@ -193,7 +193,7 @@ my_events.4 =
 			}
 			else_if = {
 				limit = {
-					barony.holder = {
+					barony.county.holder = {
 						is_ai = yes
 					}
 					has_holding_type = city_holding			# 城市地产
@@ -204,7 +204,7 @@ my_events.4 =
 			}
 			else_if = {
 				limit = {
-					barony.holder = {
+					barony.county.holder = {
 						is_ai = yes
 					}
 					has_holding_type = castle_holding		# 城堡地产
@@ -215,7 +215,7 @@ my_events.4 =
 			}
 			else_if = {
 				limit = {
-					barony.holder = {
+					barony.county.holder = {
 						is_ai = yes
 					}
 					has_holding_type = church_holding   	# 神庙地产
@@ -226,7 +226,7 @@ my_events.4 =
 			}
 			else_if = {
 				limit = {
-					barony.holder = {
+					barony.county.holder = {
 						is_ai = yes
 					}
 					has_holding_type = tribal_holding   	# 部落地产

@@ -74,18 +74,18 @@ player_整理领地 =
 # 	}
 # }
 
-ai_add_modifier =
-{
-	is_valid = {
-		not = {
-			has_character_modifier = 主的裁决
-		}
-	}
-	effect = {
-		add_character_modifier = 主的裁决
-	}
-	ai_check_interval = 1
-	ai_will_do = {
-		base = 100
-	}
-}
+# ai_add_modifier =
+# {
+# 	is_valid = {
+# 		not = {
+# 			has_character_modifier = 主的裁决
+# 		}
+# 	}
+# 	effect = {
+# 		add_character_modifier = 主的裁决
+# 	}
+# 	ai_check_interval = 1
+# 	ai_will_do = {
+# 		base = 100
+# 	}
+# }

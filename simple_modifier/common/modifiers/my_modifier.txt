@@ -22,14 +22,14 @@
 	#county_opinion_add_even_if_baron = 1000	# 男爵领大众好感
 }
 
-主的裁决 =
-{
-	icon = feast_positive
+# 主的裁决 =
+# {
+# 	icon = feast_positive
 
-	# mul
-	holding_build_gold_cost = 1000				# 省份地产建筑金钱花费
-	build_gold_cost = 1000						# 建筑金钱花费
-}
+# 	# mul
+# 	holding_build_gold_cost = 1000				# 省份地产建筑金钱花费
+# 	build_gold_cost = 1000						# 建筑金钱花费
+# }
 
 主的阻挠 =
 {
@@ -40,4 +40,38 @@
 
 	# mul
 	development_growth_factor = -10				# 发展度增长（百分比）
+	holding_build_gold_cost = 1000				# 省份地产建筑金钱花费
+	build_gold_cost = 1000						# 建筑金钱花费
+}
+
+# ========================以下是原版修正========================
+
+held_barony_modifier =
+{
+	monthly_prestige = 0.02
+	monthly_dynasty_prestige = 0.125
+}
+
+held_county_modifier =
+{
+	monthly_prestige = 0.05
+	monthly_dynasty_prestige = 0.25
+}
+
+held_duchy_modifier =
+{
+	monthly_prestige = 0.2
+	monthly_dynasty_prestige = 0.5
+}
+
+held_kingdom_modifier =
+{
+	monthly_prestige = 0.8
+	monthly_dynasty_prestige = 1
+}
+
+held_empire_modifier =
+{
+	monthly_prestige = 1.6
+	monthly_dynasty_prestige = 2
 }
