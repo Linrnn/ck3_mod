@@ -147,61 +147,61 @@ my_events.4 =
 					change_title_holder_include_vassals = {		# 改变头衔持有人and附庸
 						holder = root
 						change = scope:change
-						#change = scope:title_change
+						change = scope:title_change
 						take_baronies = yes
 					}
-					# root = {
-					# 	revoke_lease = yes						# 撤销租约
-					# 	destroy_title = prev					# 销毁头衔
-					# 	get_title = prev
-					# }
+					root = {
+						#revoke_lease = yes						# 撤销租约
+						#destroy_title = prev					# 销毁头衔
+						get_title = prev						# 获得头衔
+					}
 				}
 				remove_holding = yes
 			}
 		}
 	}
-	option = {
-		name = "修改地产"
-		every_province = {
-			if = {
-				limit = {
-					has_holding = yes
-					has_special_building = no
-					has_special_building_slot = no
-					barony = {
-						is_capital_barony = no
-					}
-					barony.county.holder = {
-						is_ai = yes
-					}
-					not = {
-						has_holding_type = tribal_holding
-						has_holding_type = city_holding	
-					}
-					# num_buildings > 1					# 地产默认占一个槽 
-					# building_slots					# 总建筑槽数
-					# free_building_slots				# 可用的建筑槽数
-				}
-				remove_holding = yes
-				set_holding_type = city_holding
-			}
-			else_if = {
-				limit = {
-					has_holding = yes
-					barony = {
-						is_capital_barony = no
-					}
-					barony.county.holder = {
-						is_ai = no
-					}
-					not = {
-						has_holding_type = church_holding	
-					}
-				}
-				set_holding_type = church_holding
-			}
-		}
-	}
+	# option = {
+	# 	name = "修改地产"
+	# 	every_province = {
+	# 		if = {
+	# 			limit = {
+	# 				has_holding = yes
+	# 				has_special_building = no
+	# 				has_special_building_slot = no
+	# 				barony = {
+	# 					is_capital_barony = no
+	# 				}
+	# 				barony.county.holder = {
+	# 					is_ai = yes
+	# 				}
+	# 				not = {
+	# 					has_holding_type = tribal_holding
+	# 					has_holding_type = city_holding	
+	# 				}
+	# 				# num_buildings > 1					# 地产默认占一个槽 
+	# 				# building_slots					# 总建筑槽数
+	# 				# free_building_slots				# 可用的建筑槽数
+	# 			}
+	# 			remove_holding = yes
+	# 			set_holding_type = city_holding
+	# 		}
+	# 		else_if = {
+	# 			limit = {
+	# 				has_holding = yes
+	# 				barony = {
+	# 					is_capital_barony = no
+	# 				}
+	# 				barony.county.holder = {
+	# 					is_ai = no
+	# 				}
+	# 				not = {
+	# 					has_holding_type = church_holding	
+	# 				}
+	# 			}
+	# 			set_holding_type = church_holding
+	# 		}
+	# 	}
+	# }
 	option = {
 		name = "创建地产"
 		every_province = {
