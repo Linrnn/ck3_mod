@@ -160,48 +160,38 @@ my_events.4 =
 			}
 		}
 	}
-	# option = {
-	# 	name = "修改地产"
-	# 	every_province = {
-	# 		if = {
-	# 			limit = {
-	# 				has_holding = yes
-	# 				has_special_building = no
-	# 				has_special_building_slot = no
-	# 				barony = {
-	# 					is_capital_barony = no
-	# 				}
-	# 				barony.county.holder = {
-	# 					is_ai = yes
-	# 				}
-	# 				not = {
-	# 					has_holding_type = tribal_holding
-	# 					has_holding_type = city_holding	
-	# 				}
-	# 				# num_buildings > 1					# 地产默认占一个槽 
-	# 				# building_slots					# 总建筑槽数
-	# 				# free_building_slots				# 可用的建筑槽数
-	# 			}
-	# 			remove_holding = yes
-	# 			set_holding_type = city_holding
-	# 		}
-	# 		else_if = {
-	# 			limit = {
-	# 				has_holding = yes
-	# 				barony = {
-	# 					is_capital_barony = no
-	# 				}
-	# 				barony.county.holder = {
-	# 					is_ai = no
-	# 				}
-	# 				not = {
-	# 					has_holding_type = church_holding	
-	# 				}
-	# 			}
-	# 			set_holding_type = church_holding
-	# 		}
-	# 	}
-	# }
+	option = {
+		name = "修改地产"
+		every_province = {
+			if = {
+				limit = {
+					has_holding = yes
+					barony.county.holder = {
+						is_ai = yes
+					}
+					not = {
+						has_holding_type = city_holding	
+					}
+					# num_buildings > 1					# 地产默认占一个槽 
+					# building_slots					# 总建筑槽数
+					# free_building_slots				# 可用的建筑槽数
+				}
+				set_holding_type = city_holding
+			}
+			else_if = {
+				limit = {
+					has_holding = yes
+					barony.county.holder = {
+						is_ai = no
+					}
+					not = {
+						has_holding_type = church_holding	
+					}
+				}
+				set_holding_type = church_holding
+			}
+		}
+	}
 	option = {
 		name = "创建地产"
 		every_province = {
@@ -306,5 +296,37 @@ my_events.4 =
 	}
 	option = {
 		name = "退出"
+	}
+}
+
+my_events.5 = {
+	type = letter_event
+
+	sender = {
+		character = scope:recipient
+		animation = personality_coward
+	}
+	immediate = {
+		show_as_tooltip = {
+			scope:target = {
+				end_war = white_peace
+			}
+		}
+		hidden_effect = {
+			save_scope_as = war_ender
+			send_interface_toast = {
+				title = vassal_interaction.war_ender_gives_up
+				scope:target = {
+					end_war = white_peace
+				}
+			}
+		}
+	}
+	option = {
+		add_opinion = {
+			target = scope:recipient
+			modifier = pleased_opinion
+			opinion = low_positive_opinion
+		}
 	}
 }

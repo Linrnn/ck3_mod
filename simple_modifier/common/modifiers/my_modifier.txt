@@ -3,9 +3,16 @@
 	icon = feast_positive
 
 	# add
+	diplomacy = 20								# 外交增加
+	martial = 20								# 军事增加
+	stewardship = 20							# 管理增加
+	intrigue = 20								# 谋略增加
+	learning = 20								# 学识增加
+	prowess = 20								# 勇武增加
+
 	men_at_arms_cap = 10						# 兵士军团的规模
 	men_at_arms_limit = 10						# 单个兵士军团的最大数量
-	knight_limit = 100							# 骑士数量
+	knight_limit = 50							# 骑士数量
 	domain_limit = 20							# 直辖上限
 	vassal_limit = 100							# 附庸上限
 	general_opinion = 1000						# 大众好感
@@ -15,7 +22,9 @@
 	# mul
 	holding_build_speed = -1000					# 省份地产建筑速度
 	build_speed = -1000							# 建筑速度
+	holding_build_gold_cost = -1000
 
+	#fertility = 10								# 生育力增加
 	#culture_tradition_max_add = 10				# 最大文化传统数
 	#opinion_of_liege = 1000					# 领主好感
 	#direct_vassal_opinion = 1000				# 直辖附庸好感
@@ -27,8 +36,8 @@
 # 	icon = feast_positive
 
 # 	# mul
-# 	holding_build_gold_cost = 1000				# 省份地产建筑金钱花费
-# 	build_gold_cost = 1000						# 建筑金钱花费
+# 	holding_build_gold_cost = 1000
+# 	build_gold_cost = 1000
 # }
 
 主的阻挠 =
@@ -37,6 +46,7 @@
 
 	# add
 	development_growth = -100					# 发展度增长（固定值）
+	domain_limit = 10
 
 	# mul
 	development_growth_factor = -10				# 发展度增长（百分比）
@@ -46,32 +56,32 @@
 
 # ========================以下是原版修正========================
 
-held_barony_modifier =
-{
-	monthly_prestige = 0.02
-	monthly_dynasty_prestige = 0.125
-}
+# held_barony_modifier =
+# {
+# 	monthly_prestige = 0.02
+# 	monthly_dynasty_prestige = 0.125
+# }
 
-held_county_modifier =
-{
-	monthly_prestige = 0.05
-	monthly_dynasty_prestige = 0.25
-}
+# held_county_modifier =
+# {
+# 	monthly_prestige = 0.05
+# 	monthly_dynasty_prestige = 0.25
+# }
 
-held_duchy_modifier =
-{
-	monthly_prestige = 0.2
-	monthly_dynasty_prestige = 0.5
-}
+# held_duchy_modifier =
+# {
+# 	monthly_prestige = 0.2
+# 	monthly_dynasty_prestige = 0.5
+# }
 
-held_kingdom_modifier =
-{
-	monthly_prestige = 0.8
-	monthly_dynasty_prestige = 1
-}
+# held_kingdom_modifier =
+# {
+# 	monthly_prestige = 0.8
+# 	monthly_dynasty_prestige = 1
+# }
 
-held_empire_modifier =
-{
-	monthly_prestige = 1.6
-	monthly_dynasty_prestige = 2
-}
+# held_empire_modifier =
+# {
+# 	monthly_prestige = 1.6
+# 	monthly_dynasty_prestige = 2
+# }
