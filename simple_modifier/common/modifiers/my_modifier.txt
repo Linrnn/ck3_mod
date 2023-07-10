@@ -35,9 +35,8 @@
 # {
 # 	icon = feast_positive
 
-# 	# mul
-# 	holding_build_gold_cost = 1000
-# 	build_gold_cost = 1000
+# 	# add
+# 	vassal_limit = 5
 # }
 
 主的阻挠 =
@@ -46,7 +45,6 @@
 
 	# add
 	development_growth = -100					# 发展度增长（固定值）
-	domain_limit = 10
 
 	# mul
 	development_growth_factor = -10				# 发展度增长（百分比）

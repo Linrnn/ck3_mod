@@ -46,6 +46,18 @@ player_整理领地 =
 	}
 }
 
+player_自杀 =
+{
+	ai_goal = no
+	effect = {
+		committed_suicide_effect = yes
+	}
+	ai_check_interval = 0
+	ai_will_do = {
+		base = 0
+	}
+}
+
 # ai_sub_gold =
 # {
 # 	is_valid = {
