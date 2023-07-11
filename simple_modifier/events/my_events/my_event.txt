@@ -295,6 +295,22 @@ my_events.4 =
 		}
 	}
 	option = {
+		name = "移除我的建筑"
+		every_province = {
+			if = {
+				limit = {
+					has_holding_type = church_holding   	# 神庙地产
+					num_buildings > 1
+					barony.county.holder = {
+						is_ai = no
+					}
+				}
+				set_holding_type = none
+				set_holding_type = church_holding
+			}
+		}
+	}
+	option = {
 		name = "退出"
 	}
 }

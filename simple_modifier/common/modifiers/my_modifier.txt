@@ -20,9 +20,8 @@
 	monthly_dread = 1000						# 每月恐怖值
 
 	# mul
-	holding_build_speed = -1000					# 省份地产建筑速度
-	build_speed = -1000							# 建筑速度
-	holding_build_gold_cost = -1000
+	holding_build_speed = -10000				# 省份地产建筑速度
+	build_speed = -10000						# 建筑速度
 
 	#fertility = 10								# 生育力增加
 	#culture_tradition_max_add = 10				# 最大文化传统数

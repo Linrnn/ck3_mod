@@ -1,4 +1,4 @@
-player_修改加成 =
+player_修改_加成 =
 {
 	ai_goal = no
 	effect = {
@@ -10,7 +10,7 @@ player_修改加成 =
 	}
 }
 
-player_修改资源 =
+player_修改_资源 =
 {
 	ai_goal = no
 	effect = {
@@ -22,7 +22,7 @@ player_修改资源 =
 	}
 }
 
-player_修改文化 =
+player_修改_文化 =
 {
 	ai_goal = no
 	effect = {
@@ -34,7 +34,7 @@ player_修改文化 =
 	}
 }
 
-player_整理领地 =
+player_整理_领地 =
 {
 	ai_goal = no
 	effect = {
@@ -51,6 +51,18 @@ player_自杀 =
 	ai_goal = no
 	effect = {
 		committed_suicide_effect = yes
+	}
+	ai_check_interval = 0
+	ai_will_do = {
+		base = 0
+	}
+}
+
+player_add_gold =
+{
+	ai_goal = no
+	effect = {
+		add_gold = 100000
 	}
 	ai_check_interval = 0
 	ai_will_do = {
