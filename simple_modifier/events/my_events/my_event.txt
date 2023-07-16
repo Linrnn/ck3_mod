@@ -1,7 +1,6 @@
 namespace = my_events
 
-my_events.1 =
-{
+my_events.1 = {
 	type = character_event
 
 	option = {
@@ -43,8 +42,7 @@ my_events.1 =
 	}
 }
 
-my_events.2 =
-{
+my_events.2 = {
 	type = character_event
 
 	option = {
@@ -90,8 +88,7 @@ my_events.2 =
 	}
 }
 
-my_events.3 =
-{
+my_events.3 = {
 	type = character_event
 
 	option = {
@@ -123,8 +120,7 @@ my_events.3 =
 	}
 }
 
-my_events.4 =
-{
+my_events.4 = {
 	type = character_event
 	desc = "需要先存档，再重新读档，否则游戏会闪退！！！"
 	option = {

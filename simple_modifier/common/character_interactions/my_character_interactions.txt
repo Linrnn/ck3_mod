@@ -144,6 +144,51 @@
 	}
 }
 
+修改_王国_法理 = {
+	category = my_character_interactions
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:recipient = {
+			highest_held_title_tier = tier_kingdom
+		}
+		scope:actor = {
+			is_ai = no
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			every_held_title = {
+				limit = {
+					#tier < scope:recipient.highest_held_title_tier
+					tier = tier_duchy
+					not = {
+						de_jure_liege = scope:recipient.primary_title
+					}
+				}
+				set_de_jure_liege_title = scope:recipient.primary_title
+			}
+			every_vassal = {
+				every_held_title = {
+					limit = {
+						#tier < scope:recipient.highest_held_title_tier
+						tier = tier_duchy
+						not = {
+							de_jure_liege = scope:recipient.primary_title
+						}
+					}
+					set_de_jure_liege_title = scope:recipient.primary_title
+				}
+			}
+		}
+	}
+
+	auto_accept = yes
+	ai_will_do = 0
+}
+
 # 立刻怀孕 = {
 # 	category = my_character_interactions
 # 	use_diplomatic_range = no
