@@ -12,9 +12,9 @@
 
 	men_at_arms_cap = 10						# 兵士军团的规模
 	men_at_arms_limit = 10						# 单个兵士军团的最大数量
-	knight_limit = 60							# 骑士数量
+	knight_limit = 100							# 骑士数量
 	domain_limit = 20							# 直辖上限
-	vassal_limit = 100							# 附庸上限
+	vassal_limit = 200							# 附庸上限
 	general_opinion = 1000						# 大众好感
 	county_opinion_add = 1000					# 民众好感度
 	monthly_dread = 1000						# 每月恐怖值
