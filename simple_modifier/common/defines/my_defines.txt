@@ -1,4 +1,5 @@
-﻿NCulture = {
-	#DEFAULT_MAX_TRADITIONS = 20				# 文化传统上限
-	REFORMATION_PROGRESS_GAIN_BASE = 100000		# 每月文化改革进度
-}
+﻿# NCulture = {
+# 	#DEFAULT_MAX_TRADITIONS = 20				# 文化传统上限
+# 	REFORMATION_PROGRESS_GAIN_BASE = 100000		# 每月文化改革进度
+# 	MAX_DUCHIES_BEFORE_PENALTY = 2				# 文化改革进度增加系数
+# }

@@ -1,66 +1,66 @@
-﻿停止_进攻_战争 = {
-	combine_into_one = yes
-	priority = 500
+﻿# 停止_进攻_战争 = {
+# 	combine_into_one = yes
+# 	priority = 500
 
-	check_create_action = {
-		every_vassal_or_below = {
-			save_temporary_scope_as = vassaler
-			if = {
-				limit = {
-					prev = {
-						is_character_interaction_valid = {
-							recipient = scope:vassaler
-							interaction = 结束_进攻_战争
-						}
-					}
-				}
-				try_create_important_action = {
-					important_action_type = 停止_进攻_战争
-					actor = root
-					recipient = scope:vassaler
-				}
-			}
-		}
-	}
-	effect = {
-		open_interaction_window = {
-			interaction = 结束_进攻_战争
-			actor = root
-			recipient = scope:recipient
-		}
-	}
-}
+# 	check_create_action = {
+# 		every_vassal_or_below = {
+# 			save_temporary_scope_as = vassaler
+# 			if = {
+# 				limit = {
+# 					prev = {
+# 						is_character_interaction_valid = {
+# 							recipient = scope:vassaler
+# 							interaction = 结束_进攻_战争
+# 						}
+# 					}
+# 				}
+# 				try_create_important_action = {
+# 					important_action_type = 停止_进攻_战争
+# 					actor = root
+# 					recipient = scope:vassaler
+# 				}
+# 			}
+# 		}
+# 	}
+# 	effect = {
+# 		open_interaction_window = {
+# 			interaction = 结束_进攻_战争
+# 			actor = root
+# 			recipient = scope:recipient
+# 		}
+# 	}
+# }
 
 
-停止_防御_战争 = {
-	combine_into_one = yes
-	priority = 500
+# 停止_防御_战争 = {
+# 	combine_into_one = yes
+# 	priority = 500
 
-	check_create_action = {
-		every_vassal_or_below = {
-			save_temporary_scope_as = vassaler
-			if = {
-				limit = {
-					prev = {
-						is_character_interaction_valid = {
-							recipient = scope:vassaler
-							interaction = 结束_防御_战争
-						}
-					}
-				}
-				try_create_important_action = {
-					important_action_type = 停止_防御_战争
-					actor = root
-					recipient = scope:vassaler
-				}
-			}
-		}
-	}
-	effect = {
-		open_interaction_window = {
-			interaction = 结束_防御_战争
-			actor = root
-			recipient = scope:recipient
-		}
-	}
-}
+# 	check_create_action = {
+# 		every_vassal_or_below = {
+# 			save_temporary_scope_as = vassaler
+# 			if = {
+# 				limit = {
+# 					prev = {
+# 						is_character_interaction_valid = {
+# 							recipient = scope:vassaler
+# 							interaction = 结束_防御_战争
+# 						}
+# 					}
+# 				}
+# 				try_create_important_action = {
+# 					important_action_type = 停止_防御_战争
+# 					actor = root
+# 					recipient = scope:vassaler
+# 				}
+# 			}
+# 		}
+# 	}
+# 	effect = {
+# 		open_interaction_window = {
+# 			interaction = 结束_防御_战争
+# 			actor = root
+# 			recipient = scope:recipient
+# 		}
+# 	}
+# }

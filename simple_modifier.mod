@@ -3,5 +3,5 @@ tags={
 	"Events"
 }
 name="simple_buff"
-supported_version="1.9.*"
-path="C:/Users/linru/Documents/Paradox Interactive/Crusader Kings III/mod/simple_modifier"
+supported_version="1.17.*"
+path="mod/simple_modifier"

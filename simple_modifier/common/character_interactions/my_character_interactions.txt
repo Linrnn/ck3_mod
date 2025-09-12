@@ -40,109 +40,109 @@
 	ai_will_do = 0
 }
 
-结束_进攻_战争 = {
-	interface = interfere_in_war
-	special_interaction = interfere_in_war_interaction
-	ai_accept_negotiation = yes
-	popup_on_receive = yes
-	pause_on_receive = yes
-	send_name = "SEND_DEMAND"
-	ai_maybe = yes
-	prompt = STOP_VASSAL_WAR_ATTACKER
-	on_decline_summary = stop_attacker_vassal_war_decline_summary
-	auto_accept = yes
-	ai_will_do = 0
+# 结束_进攻_战争 = {
+# 	interface = interfere_in_war
+# 	special_interaction = interfere_in_war_interaction
+# 	ai_accept_negotiation = yes
+# 	popup_on_receive = yes
+# 	pause_on_receive = yes
+# 	send_name = "SEND_DEMAND"
+# 	ai_maybe = yes
+# 	prompt = STOP_VASSAL_WAR_ATTACKER
+# 	on_decline_summary = stop_attacker_vassal_war_decline_summary
+# 	auto_accept = yes
+# 	ai_will_do = 0
 
-	is_shown = {
-		NOT = {
-			scope:recipient = scope:actor
-		}
-		scope:recipient = {
-			exists = liege
-			target_is_liege_or_above = scope:actor
-			highest_held_title_tier > tier_barony
-			any_character_war = {
-				primary_attacker = scope:recipient
-				save_temporary_scope_as = target_war
-			}
-		}
-		scope:actor = {
-			is_ai = no
-			NOT = {
-				is_participant_in_war = scope:target_war
-			}
-		}
-	}
-	is_valid_showing_failures_only = {
-		NOT = {
-			scope:recipient = {
-				has_strong_hook = scope:actor
-			}
-		}
-	}
-	can_be_picked = {
-		scope:target.primary_attacker = scope:recipient
-	}
-	on_accept = {
-		scope:recipient = {
-			trigger_event = {
-				id = my_events.5
-			}
-		}
-	}
-}
+# 	is_shown = {
+# 		NOT = {
+# 			scope:recipient = scope:actor
+# 		}
+# 		scope:recipient = {
+# 			exists = liege
+# 			target_is_liege_or_above = scope:actor
+# 			highest_held_title_tier > tier_barony
+# 			any_character_war = {
+# 				primary_attacker = scope:recipient
+# 				save_temporary_scope_as = target_war
+# 			}
+# 		}
+# 		scope:actor = {
+# 			is_ai = no
+# 			NOT = {
+# 				is_participant_in_war = scope:target_war
+# 			}
+# 		}
+# 	}
+# 	is_valid_showing_failures_only = {
+# 		NOT = {
+# 			scope:recipient = {
+# 				has_strong_hook = scope:actor
+# 			}
+# 		}
+# 	}
+# 	can_be_picked = {
+# 		scope:target.primary_attacker = scope:recipient
+# 	}
+# 	on_accept = {
+# 		scope:recipient = {
+# 			trigger_event = {
+# 				id = my_events.5
+# 			}
+# 		}
+# 	}
+# }
 
-结束_防御_战争 = {
-	interface = interfere_in_war
-	special_interaction = interfere_in_war_interaction
-	ai_accept_negotiation = yes
-	popup_on_receive = yes
-	pause_on_receive = yes
-	send_name = "SEND_DEMAND"
-	ai_maybe = yes
-	prompt = STOP_VASSAL_WAR_DEFENDER
-	on_decline_summary = stop_attacker_vassal_war_decline_summary
-	auto_accept = yes
-	ai_will_do = 0
+# 结束_防御_战争 = {
+# 	interface = interfere_in_war
+# 	special_interaction = interfere_in_war_interaction
+# 	ai_accept_negotiation = yes
+# 	popup_on_receive = yes
+# 	pause_on_receive = yes
+# 	send_name = "SEND_DEMAND"
+# 	ai_maybe = yes
+# 	prompt = STOP_VASSAL_WAR_DEFENDER
+# 	on_decline_summary = stop_attacker_vassal_war_decline_summary
+# 	auto_accept = yes
+# 	ai_will_do = 0
 
-	is_shown = {
-		NOT = {
-			scope:recipient = scope:actor
-		}
-		scope:recipient = {
-			exists = liege
-			target_is_liege_or_above = scope:actor
-			highest_held_title_tier > tier_barony
-			any_character_war = {
-				primary_defender = scope:recipient
-				save_temporary_scope_as = target_war
-			}
-		}
-		scope:actor = {
-			is_ai = no
-			NOT = {
-				is_participant_in_war = scope:target_war
-			}
-		}
-	}
-	is_valid_showing_failures_only = {
-		NOT = {
-			scope:recipient = {
-				has_strong_hook = scope:actor
-			}
-		}
-	}
-	can_be_picked = {
-		scope:target.primary_defender = scope:recipient
-	}
-	on_accept = {
-		scope:recipient = {
-			trigger_event = {
-				id = my_events.5
-			}
-		}
-	}
-}
+# 	is_shown = {
+# 		NOT = {
+# 			scope:recipient = scope:actor
+# 		}
+# 		scope:recipient = {
+# 			exists = liege
+# 			target_is_liege_or_above = scope:actor
+# 			highest_held_title_tier > tier_barony
+# 			any_character_war = {
+# 				primary_defender = scope:recipient
+# 				save_temporary_scope_as = target_war
+# 			}
+# 		}
+# 		scope:actor = {
+# 			is_ai = no
+# 			NOT = {
+# 				is_participant_in_war = scope:target_war
+# 			}
+# 		}
+# 	}
+# 	is_valid_showing_failures_only = {
+# 		NOT = {
+# 			scope:recipient = {
+# 				has_strong_hook = scope:actor
+# 			}
+# 		}
+# 	}
+# 	can_be_picked = {
+# 		scope:target.primary_defender = scope:recipient
+# 	}
+# 	on_accept = {
+# 		scope:recipient = {
+# 			trigger_event = {
+# 				id = my_events.5
+# 			}
+# 		}
+# 	}
+# }
 
 修改_王国_法理 = {
 	category = my_character_interactions
@@ -207,3 +207,23 @@
 # 	auto_accept = yes
 # 	ai_will_do = 0
 # }
+
+自然_死亡 = {
+	category = my_character_interactions
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+    	    death = natural
+		}
+	}
+
+	auto_accept = yes
+	ai_will_do = 0
+}

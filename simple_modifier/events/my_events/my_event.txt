@@ -14,8 +14,38 @@ my_events.1 = {
 	option = {
 		name = "角色修正"
 		add_character_modifier = 主的庇佑
+		add_character_modifier = 主的吹拂
 		#remove_character_modifier = 主的裁决
 		#remove_character_modifier = has_recently_changed_laws_modifier
+	}
+	option = {
+		name = "领地修正（慎重，建筑槽位数量的修改，是不可逆的！）"
+		every_county = {
+			if = {
+				limit = {
+					holder = {
+						is_ai = yes
+					}
+					has_county_modifier = 主的恩赐
+				}
+				remove_county_modifier = 主的恩赐
+				every_county_province = {
+					# add_building_slot = -10
+					remove_province_modifier = 主的洗礼
+				}
+			}
+			else_if = {
+				limit = {
+					holder = {
+						is_ai = no
+					}
+				}
+				add_county_modifier = 主的恩赐
+				every_county_province = {
+					add_province_modifier = 主的洗礼
+				}
+			}
+		}
 	}
 	option = {
 		name = "家族修正"
@@ -31,7 +61,7 @@ my_events.1 = {
 		}
 	}
 	option = {
-		name = "传统修正（没有提示是正常的）"
+		name = "文化修正（没有提示是正常的）"
 		culture = {
 			remove_variable = tradition_cooldown			# 传统冷却
 			#has_variable  = tradition_cooldown
@@ -51,16 +81,65 @@ my_events.2 = {
 	}
 	option = {
 		name = "威望"
-		add_prestige = 10000
+		add_prestige = 1000
 	}
 	option = {
 		name = "虔诚"
-		add_piety = 10000
+		add_piety = 1000
+	}
+	option = {
+		name = "影响力"
+		change_influence = {
+			value = 10
+			multiply = 10
+		}
 	}
 	option = {
 		name = "宗族威望"
 		dynasty = {
-			add_dynasty_prestige = 10000
+			add_dynasty_prestige = 1000
+		}
+	}
+	option = {
+		name = "正统性"
+		add_legitimacy = 100
+	}
+	option = {
+		name = "压力"
+		add_stress = -100
+	}
+	option = {
+		name = "恐怖值"
+		add_dread = 100
+	}
+	option = {
+		name = "金钱 -> 宗族威望"
+		if = {
+			limit = {
+				gold > 10000
+			}
+			add_gold = -10000
+			dynasty = {
+				add_dynasty_prestige = 100
+			}
+		}
+		else_if = {
+			limit = {
+				gold > 1000
+			}
+			add_gold = -1000
+			dynasty = {
+				add_dynasty_prestige = 10
+			}
+		}
+		else_if = {
+			limit = {
+				gold > 100
+			}
+			add_gold = -100
+			dynasty = {
+				add_dynasty_prestige = 1
+			}
 		}
 	}
 	# option = {
@@ -113,6 +192,14 @@ my_events.3 = {
 			CONVERTER = root
 			OLD_CULTURE = root.culture
 			NEW_CULTURE = culture:castilian
+		}
+	}
+	option = {
+		name = "伊朗"
+		convert_family_culture_and_notify_vassals_effect = {
+			CONVERTER = root
+			OLD_CULTURE = root.culture
+			NEW_CULTURE = culture:persian
 		}
 	}
 	option = {
@@ -198,7 +285,7 @@ my_events.4 = {
 						is_ai = no
 					}
 				}
-				set_holding_type = church_holding
+				set_holding_type = city_holding
 			}
 			# else_if = {
 			# 	limit = {
