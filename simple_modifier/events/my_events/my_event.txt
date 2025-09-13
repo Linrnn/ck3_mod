@@ -50,12 +50,6 @@ my_events.1 = {
 		}
 	}
 	option = {
-		name = "家族修正"
-		house =	{
-			add_house_modifier = 主的恩泽
-		}
-	}
-	option = {
 		name = "角色特质（原版）"
 		add_trait = saoshyant	# 萨奥希扬特
 		add_trait = sayyid		# 赛义德/赛义达
@@ -65,7 +59,7 @@ my_events.1 = {
 	}
 	option = {
 		name = "家族修正（原版）"
-		house =	{
+		house = {
 			add_house_modifier = witch_coven				# 巫师集会
 		}
 	}
@@ -113,7 +107,7 @@ my_events.2 = {
 	option = {
 		name = "宗族威望"
 		dynasty = {
-			add_dynasty_prestige = 1000
+			add_dynasty_prestige = 10000
 		}
 	}
 	option = {
@@ -131,6 +125,24 @@ my_events.2 = {
 	option = {
 		name = "金钱 -> 宗族威望"
 		if = {
+			limit = {
+				gold > 1000000
+			}
+			add_gold = -1000000
+			dynasty = {
+				add_dynasty_prestige = 10000
+			}
+		}
+		else_if = {
+			limit = {
+				gold > 100000
+			}
+			add_gold = -100000
+			dynasty = {
+				add_dynasty_prestige = 1000
+			}
+		}
+		else_if = {
 			limit = {
 				gold > 10000
 			}

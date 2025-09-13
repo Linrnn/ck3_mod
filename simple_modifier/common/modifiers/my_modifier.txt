@@ -20,10 +20,11 @@
 	# mul
 	# holding_build_speed = -10000				# 省份地产建筑速度
 	# build_speed = -10000						# 建筑速度
-	# monthly_prestige_gain_mult = 0.1			# 每月威望
+	# monthly_prestige_gain_mult = 0.1			# 每月威望增加系数
 	# monthly_piety_gain_mult = 0.1				# 每月虔诚增加系数
 	# monthly_influence_mult = 0.1				# 每月影响力增加系数
-	# monthly_dynasty_prestige_mult = 0.1		# 每月宗族威望增加系数
+	monthly_dynasty_prestige = 1				# 每月宗族威望
+	monthly_dynasty_prestige_mult = 0.1			# 每月宗族威望增加系数
 }
 
 主的吹拂 = {
@@ -38,7 +39,7 @@
 	monthly_piety = 1							# 每月虔诚
 	monthly_influence = 1						# 每月影响力
 	# monthly_legitimacy_add = 1				# 每月正统性
-	# monthly_dread = 1							# 每月恐怖值
+	monthly_dread = -1							# 每月恐怖值
 	monthly_lifestyle_xp_gain_mult = 0.5		# 每月生活方式
 }
 
@@ -54,11 +55,6 @@
 	icon = feast_positive
 	# stacking = yes							# 允许叠加
 	building_slot_add = 10						# 建筑槽位
-}
-
-主的恩泽 = {
-	icon = feast_positive
-	monthly_dynasty_prestige = 1				# 每月宗族威望
 }
 
 主的阻挠 = {
