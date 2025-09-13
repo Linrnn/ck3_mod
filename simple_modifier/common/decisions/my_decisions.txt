@@ -1,97 +1,175 @@
-player_加成 = {
-	ai_goal = no
+﻿加成 = {
+	decision_group_type = my_decision_group_types
+	ai_check_interval = 0
 	effect = {
 		trigger_event = my_events.1
 	}
-	ai_check_interval = 0
+	ai_potential = {
+		always = no
+	}
 	ai_will_do = {
 		base = 0
 	}
 }
 
-player_资源 = {
-	ai_goal = no
+资源 = {
+	decision_group_type = my_decision_group_types
+	ai_check_interval = 0
 	effect = {
 		trigger_event = my_events.2
 	}
-	ai_check_interval = 0
+	ai_potential = {
+		always = no
+	}
 	ai_will_do = {
 		base = 0
 	}
 }
 
-player_文化 = {
-	ai_goal = no
+文化 = {
+	decision_group_type = my_decision_group_types
+	ai_check_interval = 0
 	effect = {
 		trigger_event = my_events.3
 	}
-	ai_check_interval = 0
+	ai_potential = {
+		always = no
+	}
 	ai_will_do = {
 		base = 0
 	}
 }
 
-player_领地 = {
-	ai_goal = no
+领地 = {
+	decision_group_type = my_decision_group_types
+	ai_check_interval = 0
 	effect = {
 		trigger_event = my_events.4
 	}
-	ai_check_interval = 0
+	ai_potential = {
+		always = no
+	}
 	ai_will_do = {
 		base = 0
 	}
 }
 
-# player_死亡 = {
-#     ai_goal = no
-#     effect = {
-#         # committed_suicide_effect = yes
-#         death = natural
-#     }
-#     ai_check_interval = 0
-#     ai_will_do = {
-#         base = 0
-#     }
+杀死无地者 = {
+	decision_group_type = my_decision_group_types
+	ai_check_interval = 0
+	effect = {
+		every_living_character = {
+			if = {
+				limit = {
+					OR = { 
+						has_variable = flavourise_camp_purpose_legitimists
+						has_variable = flavourise_camp_purpose_brigands
+						has_variable = flavourise_camp_purpose_explorers
+						has_variable = flavourise_camp_purpose_scholars
+						has_variable = flavourise_camp_purpose_wanderers
+						has_variable = flavourise_camp_purpose_mercenaries
+						is_landless_administrative = yes
+					}
+					my_trigger_kill_character = yes
+					NOT = { is_independent_ruler = yes }
+				}
+				death = { death_reason = magic }
+			}
+		}
+		every_close_or_extended_family_member = {
+			if = {
+				limit = {
+					my_trigger_kill_character = yes
+					NOT = { is_ruler = yes }
+				}
+				death = { death_reason = magic }
+			}
+		}
+		every_courtier = {
+			if = {
+				limit = {
+					my_trigger_kill_character = yes
+					NOT = { is_ruler = yes }
+				}
+				death = { death_reason = magic }
+			}
+		}
+		every_vassal_or_below = {
+			if = {
+				limit = {
+					my_trigger_kill_character = yes
+					NOT = { is_ruler = yes }
+				}
+				death = { death_reason = magic }
+			}
+		}
+	}
+	ai_potential = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+}
+
+# 死亡 = {
+# 	decision_group_type = my_decision_group_types
+# 	ai_check_interval = 0
+# 	effect = {
+# 		# committed_suicide_effect = yes
+# 		# death = natural
+# 		death = magic
+# 	}
+# 	ai_potential = {
+# 		always = no
+# 	}
+# 	ai_will_do = {
+# 		base = 0
+# 	}
 # }
 
-# player_add_gold = {
-# 	ai_goal = no
+# 金币 = {
+# 	decision_group_type = my_decision_group_types
+# 	ai_check_interval = 0
 # 	effect = {
 # 		add_gold = 100000
 # 	}
-# 	ai_check_interval = 0
+# 	ai_potential = {
+# 		always = no
+# 	}
 # 	ai_will_do = {
 # 		base = 0
 # 	}
 # }
 
 # ai_sub_gold = {
+# 	ai_check_interval = 1
 # 	is_valid = {
 # 		gold > 100
 # 	}
 # 	effect = {
 # 		remove_short_term_gold = 50
 # 	}
-# 	ai_check_interval = 1
 # 	ai_will_do = {
 # 		base = 100
 # 	}
 # }
 
 # ai_sub_prestige = {
+# 	ai_check_interval = 1
 # 	is_valid = {
 # 		prestige > 100
 # 	}
 # 	effect = {
 # 		add_prestige = -50
 # 	}
-# 	ai_check_interval = 1
 # 	ai_will_do = {
 # 		base = 100
 # 	}
 # }
 
 # ai_add_modifier = {
+# 	ai_check_interval = 1
 # 	is_valid = {
 # 		not = {
 # 			has_character_modifier = 主的裁决
@@ -100,7 +178,6 @@ player_领地 = {
 # 	effect = {
 # 		add_character_modifier = 主的裁决
 # 	}
-# 	ai_check_interval = 1
 # 	ai_will_do = {
 # 		base = 100
 # 	}

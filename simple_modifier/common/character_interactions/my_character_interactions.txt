@@ -1,14 +1,12 @@
-移除_负面_特质 = {
+﻿移除负面特质 = {
 	category = my_character_interactions
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
-
 	is_shown = {
 		scope:actor = {
 			is_ai = no
 		}
 	}
-
 	on_accept = {
 		scope:recipient = {
 			remove_trait = wounded_1		# 受伤
@@ -35,12 +33,12 @@
 			remove_trait = typhus			# 伤寒
 		}
 	}
-
 	auto_accept = yes
 	ai_will_do = 0
 }
 
 # 结束_进攻_战争 = {
+#	category = my_character_interactions
 # 	interface = interfere_in_war
 # 	special_interaction = interfere_in_war_interaction
 # 	ai_accept_negotiation = yes
@@ -52,7 +50,6 @@
 # 	on_decline_summary = stop_attacker_vassal_war_decline_summary
 # 	auto_accept = yes
 # 	ai_will_do = 0
-
 # 	is_shown = {
 # 		NOT = {
 # 			scope:recipient = scope:actor
@@ -93,6 +90,7 @@
 # }
 
 # 结束_防御_战争 = {
+#	category = my_character_interactions
 # 	interface = interfere_in_war
 # 	special_interaction = interfere_in_war_interaction
 # 	ai_accept_negotiation = yes
@@ -104,7 +102,6 @@
 # 	on_decline_summary = stop_attacker_vassal_war_decline_summary
 # 	auto_accept = yes
 # 	ai_will_do = 0
-
 # 	is_shown = {
 # 		NOT = {
 # 			scope:recipient = scope:actor
@@ -144,11 +141,10 @@
 # 	}
 # }
 
-修改_王国_法理 = {
+修改法理 = {
 	category = my_character_interactions
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
-
 	is_shown = {
 		scope:recipient = {
 			highest_held_title_tier = tier_kingdom
@@ -157,7 +153,6 @@
 			is_ai = no
 		}
 	}
-
 	on_accept = {
 		scope:recipient = {
 			every_held_title = {
@@ -184,7 +179,6 @@
 			}
 		}
 	}
-
 	auto_accept = yes
 	ai_will_do = 0
 }
@@ -193,7 +187,6 @@
 # 	category = my_character_interactions
 # 	use_diplomatic_range = no
 # 	ignores_pending_interaction_block = yes
-
 # 	is_shown = {
 # 		scope:actor = {
 # 			is_ai = no
@@ -208,11 +201,10 @@
 # 	ai_will_do = 0
 # }
 
-自然_死亡 = {
+死亡 = {
 	category = my_character_interactions
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
-
 	is_shown = {
 		scope:actor = {
 			is_ai = no
@@ -220,10 +212,11 @@
 	}
 	on_accept = {
 		scope:recipient = {
-    	    death = natural
+			death = {
+				death_reason = magic
+			}
 		}
 	}
-
 	auto_accept = yes
 	ai_will_do = 0
 }

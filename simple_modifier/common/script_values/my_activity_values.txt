@@ -1,0 +1,3 @@
+﻿# mod来源：[RIT]禁止AI召开“大巫祭”
+
+standard_witch_ritual_cooldown_time = 30

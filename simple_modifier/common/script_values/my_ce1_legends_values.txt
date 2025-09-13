@@ -1,0 +1,23 @@
+﻿# mod来源：[RIT]禁止AI创建“传奇”
+
+base_legend_create_ai = {
+	value = -1000
+}
+heroic_legend_create_ai = {
+    value = 0
+}
+holy_legend_create_ai = {
+	value = 0
+}
+legitimizing_legend_create_ai = {
+	value = 0
+}
+illustrious_legend_create_ai = {
+	value = 0
+}
+mythical_legend_create_ai = {
+	value = 0
+}
+base_legend_complete_ai = {
+	value = 1000
+}

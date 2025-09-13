@@ -1,0 +1,7 @@
+﻿my_trigger_kill_character = {
+	is_ai = yes
+	NOT = { is_close_or_extended_family_of = ROOT }
+	# NOT = { is_family_of = ROOT }
+	NOT = { is_courtier_of = ROOT }
+	NOT = { is_vassal_or_below_of = ROOT }
+}

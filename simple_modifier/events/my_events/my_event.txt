@@ -1,40 +1,18 @@
-namespace = my_events
+﻿namespace = my_events
 
 my_events.1 = {
 	type = character_event
 
 	option = {
-		name = "角色特质"
-		add_trait = saoshyant	# 萨奥希扬特
-		add_trait = sayyid		# 赛义德/赛义达
-		add_trait = paragon		# 典范
-		add_trait = savior		# 救主
-		add_trait = witch		# 巫师
-	}
-	option = {
 		name = "角色修正"
 		add_character_modifier = 主的庇佑
 		add_character_modifier = 主的吹拂
-		#remove_character_modifier = 主的裁决
 		#remove_character_modifier = has_recently_changed_laws_modifier
 	}
 	option = {
-		name = "领地修正（慎重，建筑槽位数量的修改，是不可逆的！）"
+		name = "领地修正（慎重，建筑槽位的修改是不可逆的）"
 		every_county = {
 			if = {
-				limit = {
-					holder = {
-						is_ai = yes
-					}
-					has_county_modifier = 主的恩赐
-				}
-				remove_county_modifier = 主的恩赐
-				every_county_province = {
-					# add_building_slot = -10
-					remove_province_modifier = 主的洗礼
-				}
-			}
-			else_if = {
 				limit = {
 					holder = {
 						is_ai = no
@@ -45,16 +23,54 @@ my_events.1 = {
 					add_province_modifier = 主的洗礼
 				}
 			}
+			# if = {
+			# 	limit = {
+			# 		holder = {
+			# 			is_ai = yes
+			# 		}
+			# 		has_county_modifier = 主的恩赐
+			# 	}
+			# 	remove_county_modifier = 主的恩赐
+			# 	every_county_province = {
+			# 		add_building_slot = -10
+			# 		remove_province_modifier = 主的洗礼
+			# 	}
+			# }
+			# else_if = {
+			# 	limit = {
+			# 		holder = {
+			# 			is_ai = no
+			# 		}
+			# 	}
+			# 	add_county_modifier = 主的恩赐
+			# 	every_county_province = {
+			# 		add_province_modifier = 主的洗礼
+			# 	}
+			# }
 		}
 	}
 	option = {
 		name = "家族修正"
 		house =	{
+			add_house_modifier = 主的恩泽
+		}
+	}
+	option = {
+		name = "角色特质（原版）"
+		add_trait = saoshyant	# 萨奥希扬特
+		add_trait = sayyid		# 赛义德/赛义达
+		add_trait = paragon		# 典范
+		add_trait = savior		# 救主
+		add_trait = witch		# 巫师
+	}
+	option = {
+		name = "家族修正（原版）"
+		house =	{
 			add_house_modifier = witch_coven				# 巫师集会
 		}
 	}
 	option = {
-		name = "宗族修正"
+		name = "宗族修正（原版）"
 		dynasty = {
 			add_dynasty_modifier = dynasty_of_many_crowns	# 众王之族
 			add_dynasty_modifier = strong_blood				# 强大的血脉

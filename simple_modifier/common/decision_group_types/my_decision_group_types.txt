@@ -1,0 +1,4 @@
+﻿my_decision_group_types = {
+	sort_order = 1000
+	gui_tags = { big_button }
+}

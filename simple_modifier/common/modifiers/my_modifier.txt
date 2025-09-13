@@ -1,4 +1,4 @@
-主的庇佑 = {
+﻿主的庇佑 = {
 	icon = feast_positive
 
 	# add
@@ -8,8 +8,8 @@
 	domain_limit = 10							# 直辖上限
 	# vassal_limit = 200						# 附庸上限
 
-	# general_opinion = 1000					# 大众好感
-	# county_opinion_add = 1000					# 民众好感度
+	general_opinion = 10						# 大众好感
+	county_opinion_add = 10						# 民众好感度
 	# opinion_of_liege = 1000					# 领主好感
 	# direct_vassal_opinion = 1000				# 直辖附庸好感
 	# county_opinion_add_even_if_baron = 1000	# 男爵领大众好感
@@ -37,14 +37,15 @@
 	monthly_prestige = 1						# 每月威望
 	monthly_piety = 1							# 每月虔诚
 	monthly_influence = 1						# 每月影响力
-	# monthly_dynasty_prestige = 1				# 每月宗族威望
 	# monthly_legitimacy_add = 1				# 每月正统性
 	# monthly_dread = 1							# 每月恐怖值
-	monthly_lifestyle_xp_gain_mult = 0.1		# 每月生活方式
+	monthly_lifestyle_xp_gain_mult = 0.5		# 每月生活方式
 }
 
 主的恩赐 = {
 	icon = feast_positive
+	development_growth = 0.1					# 发展度增长（固定值）
+	development_growth_factor = 0.1				# 发展度增长（百分比）
 	holding_build_speed = -10000				# 省份地产建筑速度
 	build_speed = -10000						# 建筑速度
 }
@@ -55,9 +56,9 @@
 	building_slot_add = 10						# 建筑槽位
 }
 
-主的裁决 = {
+主的恩泽 = {
 	icon = feast_positive
-	vassal_limit = 5
+	monthly_dynasty_prestige = 1				# 每月宗族威望
 }
 
 主的阻挠 = {

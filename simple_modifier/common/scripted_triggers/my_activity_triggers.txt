@@ -1,0 +1,13 @@
+﻿# mod来源：[RIT]禁止AI召开“大巫祭”
+
+activity_witch_ritual_valid_trigger = {
+	is_ai = no
+	exists = house
+	house = {
+		has_house_modifier = witch_coven
+		any_house_member = {
+			NOT = { this = root }
+			is_witch_known_by_trigger = { CHARACTER = root }
+		}
+	}
+}
