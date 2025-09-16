@@ -100,7 +100,7 @@ my_events.2 = {
 	option = {
 		name = "影响力"
 		change_influence = {
-			value = 10
+			value = 100
 			multiply = 10
 		}
 	}
@@ -123,7 +123,7 @@ my_events.2 = {
 		add_dread = 100
 	}
 	option = {
-		name = "金钱 -> 宗族威望"
+		name = "金钱 >>> 宗族威望"
 		if = {
 			limit = {
 				gold > 1000000
@@ -167,6 +167,45 @@ my_events.2 = {
 			add_gold = -100
 			dynasty = {
 				add_dynasty_prestige = 1
+			}
+		}
+	}
+	option = {
+		name = "虔诚 >>> 宗族威望"
+		if = {
+			limit = {
+				piety > 1000000
+			}
+			add_piety = -1000000
+			dynasty = {
+				add_dynasty_prestige = 5000
+			}
+		}
+		else_if = {
+			limit = {
+				piety > 100000
+			}
+			add_piety = -100000
+			dynasty = {
+				add_dynasty_prestige = 500
+			}
+		}
+		else_if = {
+			limit = {
+				piety > 10000
+			}
+			add_piety = -10000
+			dynasty = {
+				add_dynasty_prestige = 50
+			}
+		}
+		else_if = {
+			limit = {
+				piety > 1000
+			}
+			add_piety = -1000
+			dynasty = {
+				add_dynasty_prestige = 5
 			}
 		}
 	}

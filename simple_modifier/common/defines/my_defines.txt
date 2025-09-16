@@ -1,5 +1,8 @@
-﻿# NCulture = {
-# 	#DEFAULT_MAX_TRADITIONS = 20				# 文化传统上限
-# 	REFORMATION_PROGRESS_GAIN_BASE = 100000		# 每月文化改革进度
-# 	MAX_DUCHIES_BEFORE_PENALTY = 2				# 文化改革进度增加系数
+﻿NCulture = {
+	#DEFAULT_MAX_TRADITIONS = 20				# 文化传统上限（原版数值：5）
+	REFORMATION_PROGRESS_GAIN_BASE = 100000		# 每月文化改革进度（原版数值：1.66）
+}
+
+# NCharacterOpinion = {
+# 	MAX_DUCHIES_BEFORE_PENALTY = 2				# 无惩罚可以持有的公爵领（原版数值：2）
 # }
