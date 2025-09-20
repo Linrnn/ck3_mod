@@ -1,4 +1,4 @@
-﻿加成 = {
+﻿修正 = {
 	decision_group_type = my_decision_group_types
 	ai_check_interval = 0
 	effect = {

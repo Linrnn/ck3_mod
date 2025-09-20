@@ -1,0 +1,86 @@
+﻿# 历史宝物修正
+
+mantle_prophet_modifier = {
+	# domain_tax_same_faith_mult = 0.1
+	monthly_piety_gain_mult = 0.25
+	monthly_prestige = 0.25
+	monthly_dynasty_prestige_mult = 0.05
+}
+
+angelicas_ring_modifier = {
+	court_grandeur_baseline_add = 3
+	monthly_prestige = 0.5
+	monthly_dynasty_prestige_mult = 0.05
+	# enemy_hostile_scheme_success_chance_add = -5
+	# attraction_opinion = 10
+}
+
+banner_of_edessa_modifier = {
+	court_grandeur_baseline_add = 3
+	# clergy_opinion = 5
+	monthly_piety = 1
+	# church_holding_build_gold_cost = -0.2
+	# church_holding_holding_build_gold_cost = -0.2
+}
+
+skull_cap_charlemagne_modifier = {
+	court_grandeur_baseline_add = 4
+	# powerful_vassal_opinion = 10
+	knight_effectiveness_mult = 0.1
+	# men_at_arms_maintenance = -0.05
+}
+
+spear_prophet_modifier = {
+	court_grandeur_baseline_add = 6
+	# monthly_piety_gain_per_knight_mult = 0.03
+	# levy_reinforcement_rate_same_faith = 0.5
+	# clan_government_opinion_same_faith = 5
+	knight_effectiveness_mult = 0.2
+}
+
+statue_roman_woman_modifier = {
+	monthly_prestige = 0.5
+	monthly_influence_mult = 0.05
+	# attraction_opinion = 5
+	# owned_personal_scheme_success_chance_add = 10
+}
+
+statue_constantine_modifier = {
+	# christianity_religion_opinion = 5
+	# same_culture_opinion = 5
+	monthly_influence_mult = 0.05
+	# heavy_infantry_toughness_mult = 0.1
+	# heavy_infantry_maintenance_mult = -0.1
+}
+
+statue_four_tetrarchs_modifier = {
+	monthly_influence = 0.3
+	influence_level_impact_mult = 0.05
+	monthly_dynasty_prestige = 0.5
+	# diplomacy_per_influence_level = 1
+}
+
+hydraulic_organ_modifier = {
+	# courtly_opinion = 10
+	# courtier_opinion = 10
+	# monthly_learning_lifestyle_xp_gain_mult = 0.05
+	# learning_per_influence_level = 1
+	court_grandeur_baseline_add = 5
+}
+
+pentapyrgion_modifier = {
+	court_grandeur_baseline_add = 3
+	monthly_dynasty_prestige = 0.04
+	monthly_prestige = 0.25
+	# powerful_vassal_opinion = 5
+	# happy_powerful_vassal_levy_contribution_mult = 0.04
+}
+
+throne_scone_modifier = {
+	court_grandeur_baseline_add = 3
+	monthly_dynasty_prestige = 0.04
+	monthly_prestige = 0.25
+	# scottish_opinion = 5
+	# gaelic_opinion = 5
+	# pikemen_maintenance_mult = -0.05	
+}

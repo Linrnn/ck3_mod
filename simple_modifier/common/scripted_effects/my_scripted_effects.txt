@@ -1,0 +1,45 @@
+﻿my_remove_artifact_modifier_group_effect = {
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$ }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_1_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_2_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_3_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_4_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_5_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_6_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_7_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_8_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_9_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_10_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_11_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_12_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_13_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_14_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_15_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_16_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_17_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_18_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_19_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_20_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_50_modifier }
+}
+
+my_remove_artifact_negative_modifier_group_effect = {
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$ }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_negative_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_1_negative_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_2_negative_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_3_negative_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_4_negative_modifier }
+	my_remove_artifact_modifier_effect = { modifier_value = $modifier_group$_5_negative_modifier }
+}
+
+my_remove_artifact_modifier_effect = {
+	if = {
+		limit = {
+			has_artifact_modifier = $modifier_value$
+		}
+		remove_artifact_modifier = $modifier_value$
+	}
+}

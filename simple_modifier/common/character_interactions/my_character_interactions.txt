@@ -19,7 +19,7 @@
 			remove_trait = inbred			# 近亲繁殖
 			remove_trait = maimed			# 残废
 			remove_trait = blind			# 失明
-
+			remove_trait = disfigured		# 毁容
 			remove_trait = ill				# 患病
 			remove_trait = bubonic_plague	# 腺鼠疫
 			remove_trait = cancer			# 癌症

@@ -3,13 +3,13 @@
 
 	# add
 	men_at_arms_cap = 10						# 兵士军团的规模
-	men_at_arms_limit = 10						# 单个兵士军团的最大数量
-	knight_limit = 100							# 骑士数量
-	domain_limit = 10							# 直辖上限
+	men_at_arms_limit = 2						# 单个兵士军团的最大数量
+	knight_limit = 20							# 骑士数量
+	domain_limit = 15							# 直辖上限
 	# vassal_limit = 200						# 附庸上限
 
-	general_opinion = 10						# 大众好感
-	county_opinion_add = 10						# 民众好感度
+	# general_opinion = 10						# 大众好感
+	# county_opinion_add = 10					# 民众好感度
 	# opinion_of_liege = 1000					# 领主好感
 	# direct_vassal_opinion = 1000				# 直辖附庸好感
 	# county_opinion_add_even_if_baron = 1000	# 男爵领大众好感
@@ -21,8 +21,8 @@
 	# monthly_prestige_gain_mult = 0.1			# 每月威望增加系数
 	# monthly_piety_gain_mult = 0.1				# 每月虔诚增加系数
 	# monthly_influence_mult = 0.1				# 每月影响力增加系数
-	monthly_dynasty_prestige = 1				# 每月宗族威望
-	monthly_dynasty_prestige_mult = 0.1			# 每月宗族威望增加系数
+	monthly_dynasty_prestige = 10				# 每月宗族威望
+	monthly_dynasty_prestige_mult = 1			# 每月宗族威望增加系数
 	# cultural_head_fascination_add = 1			# 作为文化头领时，对关注的革新科技点数基值
 	# cultural_head_fascination_mult = 0.5		# 着迷的革新发现概率
 	# culture_tradition_max_add = 10			# 最大文化传统数
@@ -31,15 +31,15 @@
 主的吹拂 = {
 	icon = feast_positive
 	monthly_lifestyle_xp_gain_mult = 0.5		# 每月生活方式
-	diplomacy = 20								# 外交增加
-	martial = 20								# 军事增加
-	stewardship = 20							# 管理增加
-	intrigue = 20								# 谋略增加
-	learning = 20								# 学识增加
-	prowess = 20								# 勇武增加
-	monthly_prestige = 1						# 每月威望
-	monthly_piety = 1							# 每月虔诚
-	monthly_influence = 1						# 每月影响力
+	# diplomacy = 20							# 外交增加
+	# martial = 20								# 军事增加
+	# stewardship = 20							# 管理增加
+	# intrigue = 20								# 谋略增加
+	# learning = 20								# 学识增加
+	# prowess = 20								# 勇武增加
+	# monthly_prestige = 1						# 每月威望
+	# monthly_piety = 1							# 每月虔诚
+	# monthly_influence = 1						# 每月影响力
 	# monthly_legitimacy_add = 1				# 每月正统性
 	monthly_dread = -1							# 每月恐怖值
 }
