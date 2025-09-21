@@ -54,14 +54,19 @@ my_events.1 = {
 		every_character_artifact = {
 			my_remove_artifact_negative_modifier_group_effect = { modifier_group = artifact_prowess }									# 勇武
 			my_remove_artifact_negative_modifier_group_effect = { modifier_group = artifact_monthly_prestige_penalty_modifier }			# 威望
-			# my_remove_artifact_modifier_group_effect = { modifier_group = artifact_knight_effectiveness_1_modifier }					# 骑士战斗力
-			# my_remove_artifact_modifier_group_effect = { modifier_group = artifact_court_grandeur_baseline_add }						# 宫廷显赫度
+			# my_remove_artifact_modifier_group_effect = { modifier_group = artifact_short_reign_duration_mult }						# 短暂统治持续时间
 			# my_remove_artifact_modifier_group_effect = { modifier_group = artifact_dread_baseline_add }								# 自然恐怖值
-			# my_remove_artifact_modifier_group_effect = { modifier_group = artifact_placeholder_modifier }								# 威望
-			# my_remove_artifact_modifier_group_effect = { modifier_group = artifact_monthly_minor_prestige_1_modifier }				# 威望
-			# my_remove_artifact_modifier_group_effect = { modifier_group = artifact_monthly_prestige_mult_1_modifier }					# 每月威望
-			# my_remove_artifact_modifier_group_effect = { modifier_group = artifact_monthly_piety }									# 虔诚
-			# my_remove_artifact_modifier_group_effect = { modifier_group = artifact_monthly_piety_gain_mult }							# 每月虔诚
+			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_learning_1_modifier }								# 学识
+			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_monthly_minor_prestige_1_modifier }					# 威望
+			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_monthly_piety_1_modifier }							# 虔诚
+			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_prowess_1_modifier }									# 勇武
+			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_knight_effectiveness_1_modifier }					# 骑士战斗力
+
+			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_court_grandeur_baseline_add }						# 宫廷显赫度
+			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_knight_limit }										# 骑士数量
+			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_placeholder_modifier }								# 威望
+			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_monthly_prestige_mult }								# 每月威望
+			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_monthly_piety_gain_mult }							# 每月虔诚
 
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_owned_scheme_secrecy_add }							# 计谋隐秘度
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_hostile_scheme_phase_duration_add }					# 阴谋速度
@@ -70,14 +75,17 @@ my_events.1 = {
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_learn_language_scheme_phase_duration_add }			# 学习语言阶段长度
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_owned_personal_scheme_success_chance_add }			# 私人计谋的初始成功概率
 
+			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_development_growth }									# 发展度增长
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_enemy_hard_casualty_modifier }						# 敌方伤亡修正
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_controlled_province_advantage }						# 受控领土防御优势
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_men_at_arms_maintenance }							# 兵士维护费降低
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_mercenary_hire_cost_mult }							# 佣兵雇佣花费
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_build_gold_cost }									# 建造花费降低
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_domain_tax_same_faith_mult }							# 直辖领地赋税（同信仰）
+			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_domain_tax_mult }									# 直辖领地赋税
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_vassal_tax_contribution_mult }						# 封臣的赋税贡献
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_church_holding_build_gold_cost }						# 圣殿地产/建造的建造花费
+			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_pursue_efficiency }									# 追击效率
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_archer_cavalry_screen_add }							# 弓骑兵掩护
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_legitimacy_gain_mult }								# 正统性获得
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_monthly_tyranny }									# 暴政减少值
@@ -91,6 +99,7 @@ my_events.1 = {
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_independent_ruler_opinion }							# 独立统治者好感
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_spouse_opinion_add }									# 配偶好感
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_clergy_opinion }										# 神职人员好感度
+			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_dynasty_opinion }									# 宗族好感度
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_same_faith_opinion }									# 相同信仰角色对其的好感度
 			my_remove_artifact_modifier_group_effect = { modifier_group = artifact_different_faith_opinion }							# 不同信仰角色对其的好感度
 
@@ -209,132 +218,6 @@ my_events.2 = {
 		name = "恐怖值"
 		add_dread = 100
 	}
-	option = {
-		name = "金钱 >> 宗族威望"
-		if = {
-			limit = {
-				gold > 1000000
-			}
-			add_gold = -1000000
-			dynasty = {
-				add_dynasty_prestige = 10000
-			}
-		}
-		else_if = {
-			limit = {
-				gold > 100000
-			}
-			add_gold = -100000
-			dynasty = {
-				add_dynasty_prestige = 1000
-			}
-		}
-		else_if = {
-			limit = {
-				gold > 10000
-			}
-			add_gold = -10000
-			dynasty = {
-				add_dynasty_prestige = 100
-			}
-		}
-		else_if = {
-			limit = {
-				gold > 1000
-			}
-			add_gold = -1000
-			dynasty = {
-				add_dynasty_prestige = 10
-			}
-		}
-		else_if = {
-			limit = {
-				gold > 100
-			}
-			add_gold = -100
-			dynasty = {
-				add_dynasty_prestige = 1
-			}
-		}
-	}
-	option = {
-		name = "威望 >> 宗族威望"
-		if = {
-			limit = {
-				prestige > 1000000
-			}
-			add_prestige = -1000000
-			dynasty = {
-				add_dynasty_prestige = 5000
-			}
-		}
-		else_if = {
-			limit = {
-				prestige > 100000
-			}
-			add_prestige = -100000
-			dynasty = {
-				add_dynasty_prestige = 500
-			}
-		}
-		else_if = {
-			limit = {
-				prestige > 10000
-			}
-			add_prestige = -10000
-			dynasty = {
-				add_dynasty_prestige = 50
-			}
-		}
-		else_if = {
-			limit = {
-				prestige > 1000
-			}
-			add_prestige = -1000
-			dynasty = {
-				add_dynasty_prestige = 5
-			}
-		}
-	}
-	option = {
-		name = "虔诚 >> 宗族威望"
-		if = {
-			limit = {
-				piety > 1000000
-			}
-			add_piety = -1000000
-			dynasty = {
-				add_dynasty_prestige = 5000
-			}
-		}
-		else_if = {
-			limit = {
-				piety > 100000
-			}
-			add_piety = -100000
-			dynasty = {
-				add_dynasty_prestige = 500
-			}
-		}
-		else_if = {
-			limit = {
-				piety > 10000
-			}
-			add_piety = -10000
-			dynasty = {
-				add_dynasty_prestige = 50
-			}
-		}
-		else_if = {
-			limit = {
-				piety > 1000
-			}
-			add_piety = -1000
-			dynasty = {
-				add_dynasty_prestige = 5
-			}
-		}
-	}
 	# option = {
 	# 	name = "ai_资源"
 	# 	every_ruler = {
@@ -363,6 +246,16 @@ my_events.2 = {
 my_events.3 = {
 	type = character_event
 
+	option = {
+		name = "长嗣继承法"
+		# primary_title = {
+		# 	add_title_law = single_heir_succession_law
+		# 	add_title_law_effects = single_heir_succession_law_youngest
+		# }
+		culture = {
+			add_innovation = innovation_primogeniture
+		}
+	}
 	option = {
 		name = "本地文化"
 		convert_family_culture_and_notify_vassals_effect = {
@@ -620,5 +513,169 @@ my_events.5 = {
 			modifier = pleased_opinion
 			opinion = low_positive_opinion
 		}
+	}
+}
+
+my_events.6 = {
+	type = character_event
+
+	# option = {
+	# 	name = "贷款"
+	# 	dynasty = {
+	# 		if = {
+	# 			limit = {
+	# 				has_variable = my_loan_count_variable
+	# 			}
+	# 			change_variable = { name = my_loan_count_variable add = 1 }
+	# 		}
+	# 		else = {
+	# 			set_variable = { name = my_loan_count_variable value = 1 }
+	# 		}
+	# 	}
+	# 	add_gold = 10000
+	# }
+	# option = {
+	# 	name = "还款"
+	# 	if = {
+	# 		limit = {
+	# 			dynasty = {
+	# 				var:my_loan_count_variable > 0
+	# 			}
+	# 			gold > 15000
+	# 		}
+	# 		dynasty = {
+	# 			change_variable = { name = my_loan_count_variable add = -1 }
+	# 		}
+	# 		add_gold = -15000
+	# 	}
+	# }
+	option = {
+		name = "金钱 >> 宗族威望"
+		if = {
+			limit = {
+				gold > 1000000
+			}
+			add_gold = -1000000
+			dynasty = {
+				add_dynasty_prestige = 10000
+			}
+		}
+		else_if = {
+			limit = {
+				gold > 100000
+			}
+			add_gold = -100000
+			dynasty = {
+				add_dynasty_prestige = 1000
+			}
+		}
+		else_if = {
+			limit = {
+				gold > 10000
+			}
+			add_gold = -10000
+			dynasty = {
+				add_dynasty_prestige = 100
+			}
+		}
+		else_if = {
+			limit = {
+				gold > 1000
+			}
+			add_gold = -1000
+			dynasty = {
+				add_dynasty_prestige = 10
+			}
+		}
+		else_if = {
+			limit = {
+				gold > 100
+			}
+			add_gold = -100
+			dynasty = {
+				add_dynasty_prestige = 1
+			}
+		}
+	}
+	option = {
+		name = "威望 >> 宗族威望"
+		if = {
+			limit = {
+				prestige > 1000000
+			}
+			add_prestige = -1000000
+			dynasty = {
+				add_dynasty_prestige = 5000
+			}
+		}
+		else_if = {
+			limit = {
+				prestige > 100000
+			}
+			add_prestige = -100000
+			dynasty = {
+				add_dynasty_prestige = 500
+			}
+		}
+		else_if = {
+			limit = {
+				prestige > 10000
+			}
+			add_prestige = -10000
+			dynasty = {
+				add_dynasty_prestige = 50
+			}
+		}
+		else_if = {
+			limit = {
+				prestige > 1000
+			}
+			add_prestige = -1000
+			dynasty = {
+				add_dynasty_prestige = 5
+			}
+		}
+	}
+	option = {
+		name = "虔诚 >> 宗族威望"
+		if = {
+			limit = {
+				piety > 1000000
+			}
+			add_piety = -1000000
+			dynasty = {
+				add_dynasty_prestige = 5000
+			}
+		}
+		else_if = {
+			limit = {
+				piety > 100000
+			}
+			add_piety = -100000
+			dynasty = {
+				add_dynasty_prestige = 500
+			}
+		}
+		else_if = {
+			limit = {
+				piety > 10000
+			}
+			add_piety = -10000
+			dynasty = {
+				add_dynasty_prestige = 50
+			}
+		}
+		else_if = {
+			limit = {
+				piety > 1000
+			}
+			add_piety = -1000
+			dynasty = {
+				add_dynasty_prestige = 5
+			}
+		}
+	}
+	option = {
+		name = "退出"
 	}
 }

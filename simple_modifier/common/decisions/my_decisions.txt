@@ -26,6 +26,20 @@
 	}
 }
 
+兑换 = {
+	decision_group_type = my_decision_group_types
+	ai_check_interval = 0
+	effect = {
+		trigger_event = my_events.6
+	}
+	ai_potential = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+}
+
 文化 = {
 	decision_group_type = my_decision_group_types
 	ai_check_interval = 0
