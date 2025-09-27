@@ -26,11 +26,11 @@
 	# cultural_head_fascination_add = 1			# 作为文化头领时，对关注的革新科技点数基值
 	# cultural_head_fascination_mult = 0.5		# 着迷的革新发现概率
 	# culture_tradition_max_add = 10			# 最大文化传统数
+	monthly_lifestyle_xp_gain_mult = 0.5		# 每月生活方式
 }
 
 主的吹拂 = {
 	icon = feast_positive
-	monthly_lifestyle_xp_gain_mult = 0.5		# 每月生活方式
 	# diplomacy = 20							# 外交增加
 	# martial = 20								# 军事增加
 	# stewardship = 20							# 管理增加
@@ -41,7 +41,7 @@
 	# monthly_piety = 1							# 每月虔诚
 	# monthly_influence = 1						# 每月影响力
 	# monthly_legitimacy_add = 1				# 每月正统性
-	monthly_dread = -1							# 每月恐怖值
+	# monthly_dread = -1						# 每月恐怖值
 }
 
 主的恩赐 = {

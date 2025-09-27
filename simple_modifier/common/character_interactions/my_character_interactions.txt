@@ -8,6 +8,7 @@
 		}
 	}
 	on_accept = {
+		# 参考网址：https://ck3.paradoxwikis.com/Traits
 		scope:recipient = {
 			remove_trait = wounded_1		# 受伤
 			remove_trait = wounded_2		# 身受重伤
@@ -31,6 +32,7 @@
 			remove_trait = pneumonic		# 肺炎
 			remove_trait = smallpox			# 天花
 			remove_trait = typhus			# 伤寒
+			remove_trait = measles			# 麻疹
 		}
 	}
 	auto_accept = yes
@@ -156,25 +158,33 @@
 	on_accept = {
 		scope:recipient = {
 			every_held_title = {
-				limit = {
-					#tier < scope:recipient.highest_held_title_tier
-					tier = tier_duchy
-					not = {
-						de_jure_liege = scope:recipient.primary_title
-					}
-				}
-				set_de_jure_liege_title = scope:recipient.primary_title
-			}
-			every_vassal = {
-				every_held_title = {
+				if = {
 					limit = {
 						#tier < scope:recipient.highest_held_title_tier
 						tier = tier_duchy
-						not = {
+						is_titular = no					# 名义头衔
+						is_landless_type_title = no		# 无地头衔
+						NOT = {
 							de_jure_liege = scope:recipient.primary_title
 						}
 					}
 					set_de_jure_liege_title = scope:recipient.primary_title
+				}
+			}
+			every_vassal = {
+				every_held_title = {
+					if = {
+						limit = {
+							#tier < scope:recipient.highest_held_title_tier
+							tier = tier_duchy
+							is_titular = no
+							is_landless_type_title = no
+							NOT = {
+								de_jure_liege = scope:recipient.primary_title
+							}
+						}
+						set_de_jure_liege_title = scope:recipient.primary_title
+					}
 				}
 			}
 		}
